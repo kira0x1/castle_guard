@@ -1,0 +1,23 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "castlemap_01",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "castlemap_01",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "eurorp.door01_right_01#12553",
+        "titanovsky.pizza#53772"
+      ],
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "maps/castlemap_01.vmap"
+      }
+    }
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "__guid": "7271a0d7-edb0-4ac1-b3c0-8033f475a08f",
+  "GameObjects": [
+    {
+      "__guid": "b761fb04-2422-405d-82c4-bec4e131b0af",
+      "Flags": 0,
+      "Name": "Map",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "cbb84cbf-940c-4e15-9173-2eb48bb44c67",
+          "__version": 1,
+          "EnableCollision": true,
+          "MapName": "maps/castlemap_01.vmap",
+          "NoOrigin": false,
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "02304bba-d33f-4853-9393-0cdce96f06d5",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "-0.00003715514,-124.2813,162.9053",
+      "Rotation": "-0.08617464,0.08617464,0.7018361,0.7018361",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "afdd2b67-bcd6-4ed2-b162-d2c7b905e158",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 63.95,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        },
+        {
+          "__type": "Sandbox.Bloom",
+          "__guid": "91147450-7c65-42df-a941-c665a54749ae",
+          "BloomColor": {
+            "color": [
+              {
+                "c": "1,1,1,1"
+              },
+              {
+                "t": 1,
+                "c": "1,1,1,1"
+              }
+            ],
+            "alpha": []
+          },
+          "BloomCurve": [
+            {
+              "y": 0.5
+            },
+            {
+              "x": 1,
+              "y": 1
+            }
+          ],
+          "Mode": "Additive",
+          "Strength": 0.5,
+          "Threshold": 0.5,
+          "ThresholdWidth": 0.5
+        },
+        {
+          "__type": "Sandbox.Tonemapping",
+          "__guid": "881cd31d-7100-4eef-bc53-2374ed0ccd72",
+          "__version": 1,
+          "AutoExposureEnabled": true,
+          "ExposureBias": 2,
+          "ExposureCompensation": 0,
+          "ExposureMethod": "RGB",
+          "MaximumExposure": 2,
+          "MinimumExposure": 1,
+          "Mode": "Legacy",
+          "Rate": 1
+        },
+        {
+          "__type": "Sandbox.Sharpen",
+          "__guid": "81c7ab25-4b40-437d-987e-0224744434ec",
+          "Scale": 0.025
+        }
+      ]
+    },
+    {
+      "__guid": "a927c728-e0c6-4706-a1d2-ec67ec81dfe2",
+      "Flags": 0,
+      "Name": "Player",
+      "Position": "-70.27689,262.2769,0",
+      "Rotation": "0,0,-0.258819,0.9659258",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Citizen.CitizenAnimationHelper",
+          "__guid": "6609da33-b141-4123-9e62-628c621be8e2",
+          "BodyWeight": 1,
+          "EyesWeight": 1,
+          "HeadWeight": 1,
+          "LookAtEnabled": false,
+          "Target": {
+            "_type": "component",
+            "component_id": "049d187e-a2bc-464c-961a-15212fb0fd6c",
+            "go": "fc1a820d-5945-4eda-935f-d979a8459bf8",
+            "component_type": "SkinnedModelRenderer"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "fc1a820d-5945-4eda-935f-d979a8459bf8",
+          "Flags": 0,
+          "Name": "Model",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "049d187e-a2bc-464c-961a-15212fb0fd6c",
+              "BodyGroups": 65,
+              "CreateBoneObjects": false,
+              "MaterialGroup": "Skin04",
+              "Model": "models/citizen/citizen.vmdl",
+              "Morphs": {},
+              "Parameters": {
+                "bools": {},
+                "ints": {},
+                "floats": {},
+                "vectors": {},
+                "rotations": {}
+              },
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
+            }
+          ]
+        },
+        {
+          "__guid": "34da0d5c-7293-4869-9f9f-b638fa044fb4",
+          "Flags": 0,
+          "Name": "Clothes",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "26329647-f70f-4fbf-aa47-20dfc9aa6755",
+              "Flags": 0,
+              "Name": "Shirt",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "69511cca-3e52-4f01-97b8-534525fa93af",
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": {
+                    "_type": "component",
+                    "component_id": "049d187e-a2bc-464c-961a-15212fb0fd6c",
+                    "go": "fc1a820d-5945-4eda-935f-d979a8459bf8",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "CreateBoneObjects": false,
+                  "Model": "models/citizen_clothes/shirt/buttoned_shirt/models/buttoned_shirt.vmdl",
+                  "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ]
+            },
+            {
+              "__guid": "b981e6a5-844e-4614-b034-2746f50c45d1",
+              "Flags": 0,
+              "Name": "Shoes",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "cef14703-3b68-4fca-bef9-5f2e73eb2ab8",
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": {
+                    "_type": "component",
+                    "component_id": "049d187e-a2bc-464c-961a-15212fb0fd6c",
+                    "go": "fc1a820d-5945-4eda-935f-d979a8459bf8",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "CreateBoneObjects": false,
+                  "Model": "models/citizen_clothes/shoes/boxing_boots/models/boxing_boots.vmdl",
+                  "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ]
+            },
+            {
+              "__guid": "c8d5fec2-a1bb-4b58-9cb6-6a477b64cfe8",
+              "Flags": 0,
+              "Name": "Hair",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "83dd1caa-5cb2-40a9-9fe7-745b9239e44a",
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": {
+                    "_type": "component",
+                    "component_id": "049d187e-a2bc-464c-961a-15212fb0fd6c",
+                    "go": "fc1a820d-5945-4eda-935f-d979a8459bf8",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "CreateBoneObjects": false,
+                  "Model": "models/citizen_clothes/hair/hair_shortscruffy/models/hair_shortscruffy.vmdl",
+                  "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "0.09112,0.40827,0.54419,1",
+                  "UseAnimGraph": true
+                }
+              ]
+            },
+            {
+              "__guid": "44f6f2da-7538-402c-acb8-9625be043195",
+              "Flags": 0,
+              "Name": "Pants",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "86a6fd84-80ef-46a4-bc4f-64c26b524d92",
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": {
+                    "_type": "component",
+                    "component_id": "049d187e-a2bc-464c-961a-15212fb0fd6c",
+                    "go": "fc1a820d-5945-4eda-935f-d979a8459bf8",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "CreateBoneObjects": false,
+                  "Model": "models/citizen_clothes/trousers/jeans/models/jeans_black.vmdl",
+                  "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "PhysicsSubSteps": 1,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": true,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "castle_01",
+  "Description": "",
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
