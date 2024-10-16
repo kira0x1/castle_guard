@@ -10,10 +10,7 @@
       "IncludeSourceFiles": false,
       "Resources": null,
       "PackageReferences": [],
-      "EditorReferences": [
-        "eurorp.door01_right_01#12553",
-        "titanovsky.pizza#53772"
-      ],
+      "EditorReferences": [],
       "IsWhitelistDisabled": false,
       "Metadata": {
         "SingleAssetSource": "maps/castlemap_01.vmap"

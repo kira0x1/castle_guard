@@ -1,9 +1,8 @@
-
 public sealed class MyComponent : Component
 {
-	[Property] public string StringProperty { get; set; }
+    [Property] public string StringProperty { get; set; }
 
-	protected override void OnUpdate()
-	{
-	}
+    protected override void OnUpdate()
+    {
+    }
 }

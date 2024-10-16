@@ -22,94 +22,85 @@
       "Children": []
     },
     {
-      "__guid": "02304bba-d33f-4853-9393-0cdce96f06d5",
-      "Flags": 0,
-      "Name": "Camera",
-      "Position": "-0.00003715514,-124.2813,162.9053",
-      "Rotation": "-0.08617464,0.08617464,0.7018361,0.7018361",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.CameraComponent",
-          "__guid": "afdd2b67-bcd6-4ed2-b162-d2c7b905e158",
-          "BackgroundColor": "0.33333,0.46275,0.52157,1",
-          "ClearFlags": "All",
-          "FieldOfView": 63.95,
-          "IsMainCamera": true,
-          "Orthographic": false,
-          "OrthographicHeight": 1204,
-          "Priority": 1,
-          "RenderExcludeTags": "",
-          "RenderTags": "",
-          "TargetEye": "None",
-          "Viewport": "0,0,1,1",
-          "ZFar": 10000,
-          "ZNear": 10
-        },
-        {
-          "__type": "Sandbox.Bloom",
-          "__guid": "91147450-7c65-42df-a941-c665a54749ae",
-          "BloomColor": {
-            "color": [
-              {
-                "c": "1,1,1,1"
-              },
-              {
-                "t": 1,
-                "c": "1,1,1,1"
-              }
-            ],
-            "alpha": []
-          },
-          "BloomCurve": [
-            {
-              "y": 0.5
-            },
-            {
-              "x": 1,
-              "y": 1
-            }
-          ],
-          "Mode": "Additive",
-          "Strength": 0.5,
-          "Threshold": 0.5,
-          "ThresholdWidth": 0.5
-        },
-        {
-          "__type": "Sandbox.Tonemapping",
-          "__guid": "881cd31d-7100-4eef-bc53-2374ed0ccd72",
-          "__version": 1,
-          "AutoExposureEnabled": true,
-          "ExposureBias": 2,
-          "ExposureCompensation": 0,
-          "ExposureMethod": "RGB",
-          "MaximumExposure": 2,
-          "MinimumExposure": 1,
-          "Mode": "Legacy",
-          "Rate": 1
-        },
-        {
-          "__type": "Sandbox.Sharpen",
-          "__guid": "81c7ab25-4b40-437d-987e-0224744434ec",
-          "Scale": 0.025
-        }
-      ]
-    },
-    {
       "__guid": "a927c728-e0c6-4706-a1d2-ec67ec81dfe2",
       "Flags": 0,
       "Name": "Player",
-      "Position": "-70.27689,262.2769,0",
-      "Rotation": "0,0,-0.258819,0.9659258",
+      "Position": "0,96,0",
+      "Rotation": "0,0,0.7071068,0.7071069",
       "Enabled": true,
       "Components": [
         {
           "__type": "Sandbox.Citizen.CitizenAnimationHelper",
           "__guid": "6609da33-b141-4123-9e62-628c621be8e2",
+          "__enabled": false,
           "BodyWeight": 1,
           "EyesWeight": 1,
           "HeadWeight": 1,
           "LookAtEnabled": false,
+          "Target": {
+            "_type": "component",
+            "component_id": "049d187e-a2bc-464c-961a-15212fb0fd6c",
+            "go": "fc1a820d-5945-4eda-935f-d979a8459bf8",
+            "component_type": "SkinnedModelRenderer"
+          }
+        },
+        {
+          "__type": "Sandbox.CharacterController",
+          "__guid": "ac837698-cf60-411b-8fc2-2fc0a5a0d407",
+          "__enabled": false,
+          "Acceleration": 10,
+          "Bounciness": 0.3,
+          "GroundAngle": 45,
+          "Height": 72,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18,
+          "UseCollisionRules": false
+        },
+        {
+          "__type": "PlayerController",
+          "__guid": "7c1d6401-9699-4fc0-bd02-f185e566c799",
+          "__enabled": false,
+          "AnimationHelper": {
+            "_type": "component",
+            "component_id": "6609da33-b141-4123-9e62-628c621be8e2",
+            "go": "a927c728-e0c6-4706-a1d2-ec67ec81dfe2",
+            "component_type": "CitizenAnimationHelper"
+          },
+          "CharacterController": {
+            "_type": "component",
+            "component_id": "ac837698-cf60-411b-8fc2-2fc0a5a0d407",
+            "go": "a927c728-e0c6-4706-a1d2-ec67ec81dfe2",
+            "component_type": "CharacterController"
+          },
+          "CrouchMoveSpeed": 64,
+          "RunMoveSpeed": 190,
+          "SprintMoveSpeed": 320,
+          "WalkMoveSpeed": 190
+        },
+        {
+          "__type": "PlayerFootsteps",
+          "__guid": "00cd6a2b-03cf-47e2-9aa2-2d632075b70d",
+          "Source": {
+            "_type": "component",
+            "component_id": "049d187e-a2bc-464c-961a-15212fb0fd6c",
+            "go": "fc1a820d-5945-4eda-935f-d979a8459bf8",
+            "component_type": "SkinnedModelRenderer"
+          }
+        },
+        {
+          "__type": "PlayerPusher",
+          "__guid": "a3a0f1f6-5d73-4d42-b168-df164b7ac687",
+          "Radius": 100
+        },
+        {
+          "__type": "Dresser",
+          "__guid": "6ae0377f-3458-4cd2-bb1e-027756be4825",
+          "Clothes": [
+            "models/citizen_clothes/gloves/boxing_gloves/boxing_gloves_red.clothing",
+            "models/citizen_clothes/jacket/biker_jacket/biker_jacket.clothing",
+            "models/citizen_clothes/hair/hair_longbob/hair_longbob.clothing"
+          ],
           "Target": {
             "_type": "component",
             "component_id": "049d187e-a2bc-464c-961a-15212fb0fd6c",
@@ -128,9 +119,9 @@
             {
               "__type": "Sandbox.SkinnedModelRenderer",
               "__guid": "049d187e-a2bc-464c-961a-15212fb0fd6c",
-              "BodyGroups": 65,
+              "BodyGroups": 277,
               "CreateBoneObjects": false,
-              "MaterialGroup": "Skin04",
+              "MaterialGroup": "default",
               "Model": "models/citizen/citizen.vmdl",
               "Morphs": {},
               "Parameters": {
@@ -150,13 +141,132 @@
               "Tint": "1,1,1,1",
               "UseAnimGraph": true
             }
+          ],
+          "Children": [
+            {
+              "__guid": "c96b68cb-1072-4f48-9ecb-67d6da959022",
+              "Flags": 0,
+              "Name": "Clothing - boxing_gloves_red",
+              "Tags": "clothing",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "e23c7a12-4388-4b6d-854e-a30a10db355e",
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": {
+                    "_type": "component",
+                    "component_id": "049d187e-a2bc-464c-961a-15212fb0fd6c",
+                    "go": "fc1a820d-5945-4eda-935f-d979a8459bf8",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "CreateBoneObjects": false,
+                  "Model": "models/citizen_clothes/gloves/boxing_gloves/models/boxing_gloves_red.vmdl",
+                  "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ]
+            },
+            {
+              "__guid": "ca2a7d7c-7788-4470-a281-923f72d06fc3",
+              "Flags": 0,
+              "Name": "Clothing - biker_jacket",
+              "Tags": "clothing",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "e95a8f23-9938-4140-a863-c96f4fa1473d",
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": {
+                    "_type": "component",
+                    "component_id": "049d187e-a2bc-464c-961a-15212fb0fd6c",
+                    "go": "fc1a820d-5945-4eda-935f-d979a8459bf8",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "CreateBoneObjects": false,
+                  "Model": "models/citizen_clothes/jacket/biker_jacket/models/biker_jacket.vmdl",
+                  "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ]
+            },
+            {
+              "__guid": "5aec2b56-19ab-4ac3-bd35-87bbe42ee8f3",
+              "Flags": 0,
+              "Name": "Clothing - hair_longbob",
+              "Tags": "clothing",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "4a6de197-c975-4576-bd9f-9c9d31227dc6",
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": {
+                    "_type": "component",
+                    "component_id": "049d187e-a2bc-464c-961a-15212fb0fd6c",
+                    "go": "fc1a820d-5945-4eda-935f-d979a8459bf8",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": "Long Hair",
+                  "Model": "models/citizen_clothes/hair/hair_longbob/models/hair_longbob.vmdl",
+                  "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "0.64565,0.44453,0.3411,1",
+                  "UseAnimGraph": true
+                }
+              ]
+            }
           ]
         },
         {
           "__guid": "34da0d5c-7293-4869-9f9f-b638fa044fb4",
           "Flags": 0,
           "Name": "Clothes",
-          "Enabled": true,
           "Children": [
             {
               "__guid": "26329647-f70f-4fbf-aa47-20dfc9aa6755",
@@ -311,6 +421,117 @@
               ]
             }
           ]
+        },
+        {
+          "__guid": "02304bba-d33f-4853-9393-0cdce96f06d5",
+          "Flags": 0,
+          "Name": "Camera",
+          "Position": "-196.2569,-0.0005758509,170.6078",
+          "Rotation": "0.0000000372529,0.2048502,0,0.9787933",
+          "Enabled": true,
+          "OwnerTransfer": 0,
+          "Components": [
+            {
+              "__type": "Sandbox.CameraComponent",
+              "__guid": "afdd2b67-bcd6-4ed2-b162-d2c7b905e158",
+              "BackgroundColor": "0.33333,0.46275,0.52157,1",
+              "ClearFlags": "All",
+              "FieldOfView": 73.72,
+              "IsMainCamera": true,
+              "Orthographic": false,
+              "OrthographicHeight": 1204,
+              "Priority": 1,
+              "RenderExcludeTags": "",
+              "RenderTags": "",
+              "TargetEye": "None",
+              "Viewport": "0,0,1,1",
+              "ZFar": 10000,
+              "ZNear": 10
+            },
+            {
+              "__type": "Sandbox.Bloom",
+              "__guid": "91147450-7c65-42df-a941-c665a54749ae",
+              "BloomColor": {
+                "color": [
+                  {
+                    "c": "1,1,1,1"
+                  },
+                  {
+                    "t": 1,
+                    "c": "1,1,1,1"
+                  }
+                ],
+                "alpha": []
+              },
+              "BloomCurve": [
+                {
+                  "y": 0.5
+                },
+                {
+                  "x": 1,
+                  "y": 1
+                }
+              ],
+              "Mode": "Additive",
+              "Strength": 0.5,
+              "Threshold": 0.5,
+              "ThresholdWidth": 0.5
+            },
+            {
+              "__type": "Sandbox.Tonemapping",
+              "__guid": "881cd31d-7100-4eef-bc53-2374ed0ccd72",
+              "__version": 1,
+              "AutoExposureEnabled": true,
+              "ExposureBias": 2,
+              "ExposureCompensation": 0,
+              "ExposureMethod": "RGB",
+              "MaximumExposure": 2,
+              "MinimumExposure": 1,
+              "Mode": "Legacy",
+              "Rate": 1
+            },
+            {
+              "__type": "Sandbox.Sharpen",
+              "__guid": "81c7ab25-4b40-437d-987e-0224744434ec",
+              "Scale": 0.025
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "20fa3493-88a9-4d39-9699-593659daeeac",
+      "Flags": 0,
+      "Name": "2D Skybox",
+      "Tags": "skybox",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "9d1e3387-0f84-42ad-9cb3-974a2618e116",
+          "SkyIndirectLighting": true,
+          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.EnvmapProbe",
+          "__guid": "8e722fa4-27f5-4c10-89e0-95ddbb8ab8bc",
+          "Texture": "textures/cubemaps/default2.vtex",
+          "Bounds": {
+            "Mins": "-1024,-512,-512",
+            "Maxs": "1024,2860,512"
+          },
+          "DelayBetweenUpdates": 0.1,
+          "Feathering": 0.02,
+          "FrameInterval": 5,
+          "MaxDistance": 512,
+          "MultiBounce": false,
+          "Projection": "Sphere",
+          "RenderDynamically": false,
+          "TintColor": "1,1,1,1",
+          "UpdateStrategy": "OnEnabled",
+          "ZFar": 4096,
+          "ZNear": 16
         }
       ]
     }
