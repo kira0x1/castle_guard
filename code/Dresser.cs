@@ -1,4 +1,4 @@
-using Sandbox.Citizen;
+namespace Kira;
 
 public sealed class Dresser : Component, Component.ExecuteInEditor
 {

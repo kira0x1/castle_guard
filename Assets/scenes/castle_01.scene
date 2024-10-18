@@ -27,6 +27,7 @@
       "Name": "Player",
       "Position": "-272,1632,0",
       "Rotation": "0,0,0.7071068,0.7071069",
+      "Tags": "player",
       "Enabled": true,
       "Components": [
         {
@@ -91,10 +92,10 @@
           "Radius": 100
         },
         {
-          "__type": "Dresser",
+          "__type": "Kira.Dresser",
           "__guid": "6ae0377f-3458-4cd2-bb1e-027756be4825",
           "Clothes": [
-            "models/citizen_clothes/shoes/boxing_boots/boxing_boots.clothing",
+            "models/citizen_clothes/shoes/boots/army_boots.clothing",
             "models/citizen_clothes/jacket/hoodie/hoodie_black.clothing",
             "models/citizen_clothes/trousers/cargopants/brown_cargo_pants.clothing",
             "models/citizen_clothes/glasses/nerdy_glasses/nerdy_glasses.clothing",
@@ -144,15 +145,15 @@
           ],
           "Children": [
             {
-              "__guid": "486bee17-4798-47ec-a795-a1a05a59588f",
+              "__guid": "b584eddf-3bc8-43fa-b60d-5eadb023f590",
               "Flags": 0,
-              "Name": "Clothing - boxing_boots",
+              "Name": "Clothing - army_boots",
               "Tags": "clothing",
               "Enabled": true,
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "0329cfc5-3d71-4765-b7c6-4609d636ee5d",
+                  "__guid": "56133bf2-4302-46c4-93b7-4e4a97aa7203",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -161,7 +162,7 @@
                     "component_type": "SkinnedModelRenderer"
                   },
                   "CreateBoneObjects": false,
-                  "Model": "models/citizen_clothes/shoes/boxing_boots/models/boxing_boots.vmdl",
+                  "Model": "models/citizen_clothes/shoes/boots/models/army_boots.vmdl",
                   "Morphs": {},
                   "Parameters": {
                     "bools": {},
@@ -183,7 +184,7 @@
               ]
             },
             {
-              "__guid": "d9d338ec-7538-4f15-8722-dc30d0dee82f",
+              "__guid": "fdd66a1e-28bd-4e6d-ab14-b2215c300c88",
               "Flags": 0,
               "Name": "Clothing - hoodie_black",
               "Tags": "clothing",
@@ -191,7 +192,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "6f9f5110-7c73-45b2-8f21-c7031223229e",
+                  "__guid": "504165e4-4acc-4faf-a403-76eae4cf53c7",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -222,7 +223,7 @@
               ]
             },
             {
-              "__guid": "1de7aafb-f6c4-4cb2-bdec-07a2bd9dc2ed",
+              "__guid": "520983e7-5fb7-4a00-ba59-3a5482861703",
               "Flags": 0,
               "Name": "Clothing - brown_cargo_pants",
               "Tags": "clothing",
@@ -230,7 +231,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "19f57ecc-410f-42b4-a6a6-a75b56d385a2",
+                  "__guid": "f560c31e-5d77-4630-9391-0dcc41e24858",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -261,7 +262,7 @@
               ]
             },
             {
-              "__guid": "63191add-c8cc-40b6-b451-c0003c730263",
+              "__guid": "16a77c7c-0a9f-4784-8e81-8ac75f6f07a3",
               "Flags": 0,
               "Name": "Clothing - nerdy_glasses",
               "Tags": "clothing",
@@ -269,7 +270,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "60395576-a51c-433f-9a1e-540925a16f82",
+                  "__guid": "a9523d0d-7726-4de3-9899-1a817b5f72db",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -300,7 +301,7 @@
               ]
             },
             {
-              "__guid": "072f70e3-96dd-4b09-b82d-6eea0b2ce5e3",
+              "__guid": "a5aab3f7-2a0d-47f1-8d0b-2d576ffeade1",
               "Flags": 0,
               "Name": "Clothing - hair.loose.grey",
               "Tags": "clothing",
@@ -308,7 +309,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "020b4e19-c09e-4a76-a1be-5bc258e73de0",
+                  "__guid": "e8a51ace-c42e-4b7d-ba4d-9a4799de69ac",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -617,8 +618,25 @@
       "__guid": "70fa216c-7a48-424c-ae22-892d8424286a",
       "Flags": 0,
       "Name": "Turret",
-      "Position": "0,1856,0",
+      "Position": "0,2048,0",
       "Enabled": true,
+      "Components": [
+        {
+          "__type": "Kira.Turret",
+          "__guid": "1426c209-1a4b-4b6d-b1c5-1bf6231f745d",
+          "Damage": 20,
+          "FireRate": 0.2,
+          "Nozzle": {
+            "_type": "gameobject",
+            "go": "4e89b3cd-e842-4e12-9494-8ee6f59a8f56"
+          },
+          "Target": {
+            "_type": "gameobject",
+            "go": "ae5f25f4-9970-4ad8-888e-8404e7b6d37a"
+          },
+          "TurnSpeed": 0.15
+        }
+      ],
       "Children": [
         {
           "__guid": "40926bd6-523a-468b-95c7-af9767b6a656",
@@ -650,168 +668,177 @@
           ]
         },
         {
-          "__guid": "903dba75-3913-4979-b3c6-ab258bf81e75",
+          "__guid": "4e89b3cd-e842-4e12-9494-8ee6f59a8f56",
           "Flags": 0,
-          "Name": "Cube",
+          "Name": "Nozzle",
           "Position": "0,0,48",
-          "Scale": "0.3,0.3,0.3",
+          "Rotation": "0,0,0.7071067,0.7071068",
           "Enabled": true,
-          "Components": [
+          "Children": [
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "8f98a65a-7e0b-4b5e-9dc1-895a823ac020",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/dev/box.vmdl",
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "On",
-              "Tint": "0.65581,0.35485,0.16777,1"
+              "__guid": "40412d72-10ec-4425-aa2a-b23501e97305",
+              "Flags": 0,
+              "Name": "nozzle_model",
+              "Position": "7.027343,-0.0002210647,-0.001102448",
+              "Rotation": "0.5,-0.4999999,-0.4999999,0.5",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.MeshComponent",
+                  "__guid": "c6907277-d179-4ce2-bfdd-f2743d5d77d3",
+                  "Collision": "Mesh",
+                  "Color": "1,1,1,1",
+                  "HideInGame": false,
+                  "IsTrigger": false,
+                  "Mesh": {
+                    "Topology": "H4sIAAAAAAAACl2Qiw6CUAxDh1flgg/wAfr/X2pP0iWLJA25W9t16xHxFc4C30E4\u002Bt2FWbgKd2Ew4NTvIZxcb9ZH4b5db\u002Bb9z/oUzVh8m7lPc9FOzjRYQ8ZXyXxxXvrw4e72wvtWdoEPdzMXj8We9OHDXcvO7EqdN396eKaeLHjkLciePeYxi4z0mMFtMisablFvRXZ2Tj158KQOF78f9WSROMQBAAA=",
+                    "Positions": [
+                      "-2.867012,-2.000137,-0.0000001192175",
+                      "2.866181,-1.999477,-0.0000001191781",
+                      "2.867226,2.424736,0.0000001445255",
+                      "-2.865966,2.424072,0.000000144486",
+                      "-2.866181,2.424157,-20.44531",
+                      "2.867012,2.424817,-20.44531",
+                      "2.865966,-1.999404,-20.44531",
+                      "-2.867226,-2.000067,-20.44531"
+                    ],
+                    "TextureCoord": [
+                      "0.5895681,-1.430881",
+                      "0.410406,-57.64005",
+                      "0.5896008,-1.569138",
+                      "58.64005,-1.430881",
+                      "0.4104387,-1.569117",
+                      "0.5896008,-57.64005",
+                      "0.4104059,-1.43086",
+                      "-57.64005,-1.569116",
+                      "0.4104059,-1.56914",
+                      "0.4104319,-58.27896",
+                      "0.4104387,-1.430883",
+                      "59.27896,-1.56914",
+                      "0.5896009,-1.430862",
+                      "0.5895616,-58.27896",
+                      "0.5895682,-1.569119",
+                      "-58.27896,-1.430862",
+                      "-57.64005,-1.43086",
+                      "0.4103994,-58.27896",
+                      "-58.27896,-1.569119",
+                      "0.4104386,-57.64005",
+                      "59.27896,-1.430883",
+                      "0.5895682,-57.64005",
+                      "58.64005,-1.569137",
+                      "0.5895941,-58.27896"
+                    ],
+                    "TextureUAxis": [
+                      "1,-0,0.0000004851423",
+                      "-1,-0,-0.0000004849944",
+                      "0.00001046097,-1,-0.000000002470851",
+                      "-0.00001050761,1,0.000000002484133",
+                      "1,0.00000001122904,0.0001151091",
+                      "1,0.0000001512055,0.0001151091"
+                    ],
+                    "TextureVAxis": [
+                      "-0.000001995813,0,-1",
+                      "-0.000001996015,0,-1",
+                      "-0.0002361972,0.0000003706928,-1",
+                      "-0.0002364128,0.0000001840963,-1",
+                      "0.0000000004296809,-1,-0.000003732815",
+                      "0.0000000003867267,-1,-0.000003359654"
+                    ],
+                    "TextureScale": [
+                      "0.2500001,0.2499994",
+                      "0.25,0.2499998",
+                      "0.2500015,0.2499998",
+                      "0.2500015,0.25",
+                      "0.2500001,0.2500015",
+                      "0.2500001,0.2500015"
+                    ],
+                    "TextureOffset": [
+                      "63.99902,0.8453827",
+                      "64.00099,0.8451233",
+                      "74.13379,0.8393555",
+                      "53.86621,0.8460999",
+                      "63.9758,74.13477",
+                      "63.9767,74.13525"
+                    ],
+                    "MaterialIndex": [
+                      5,
+                      5,
+                      5,
+                      5,
+                      5,
+                      5
+                    ],
+                    "EdgeFlags": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "Materials": [
+                      "materials/dev/reflectivity_30.vmat",
+                      "materials/dev/dev_grating.vmat",
+                      "materials/dev/dev_hotspot_layout01.vmat",
+                      "materials/dev/dev_measuredoor_112.vmat",
+                      "materials/dev/dev_measuredoor01_vr.vmat",
+                      "materials/dev/dev_measuregeneric01.vmat",
+                      "materials/dev/dev_measuregeneric01b.vmat"
+                    ]
+                  },
+                  "SmoothingAngle": 40,
+                  "Static": true
+                }
+              ]
             },
             {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "d8175f3c-180a-4b5b-b7c5-f15ce50228ff",
-              "Center": "0,0,0",
-              "IsTrigger": false,
-              "Scale": "50,50,50",
-              "Static": false
-            }
-          ]
-        },
-        {
-          "__guid": "40412d72-10ec-4425-aa2a-b23501e97305",
-          "Flags": 0,
-          "Name": "Box",
-          "Position": "0.0000295639,23.24426,48",
-          "Rotation": "0.7071068,0,0,0.7071068",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.MeshComponent",
-              "__guid": "c6907277-d179-4ce2-bfdd-f2743d5d77d3",
-              "Collision": "Mesh",
-              "Color": "1,1,1,1",
-              "HideInGame": false,
-              "IsTrigger": false,
-              "Mesh": {
-                "Topology": "H4sIAAAAAAAACl2Qiw6CUAxDh1flgg/wAfr/X2pP0iWLJA25W9t16xHxFc4C30E4\u002Bt2FWbgKd2Ew4NTvIZxcb9ZH4b5db\u002Bb9z/oUzVh8m7lPc9FOzjRYQ8ZXyXxxXvrw4e72wvtWdoEPdzMXj8We9OHDXcvO7EqdN396eKaeLHjkLciePeYxi4z0mMFtMisablFvRXZ2Tj158KQOF78f9WSROMQBAAA=",
-                "Positions": [
-                  "-2.867012,-2.000134,18.34973",
-                  "2.866181,-1.999475,18.34973",
-                  "2.867226,2.424738,18.34973",
-                  "-2.865966,2.424075,18.34973",
-                  "-2.866181,2.424153,-9.38684",
-                  "2.867012,2.424816,-9.38684",
-                  "2.865966,-1.999404,-9.38684",
-                  "-2.867226,-2.000068,-9.38684"
-                ],
-                "TextureCoord": [
-                  "0.5895681,0.5691193",
-                  "0.4104059,0.9333839",
-                  "0.5896008,0.4308627",
-                  "0.06661606,0.5691193",
-                  "0.4104386,0.4308834",
-                  "0.5896008,0.9333839",
-                  "0.4104059,0.56914",
-                  "0.9333839,0.4308834",
-                  "0.4104059,0.4308602",
-                  "0.4104319,0.06661606",
-                  "0.4104386,0.5691171",
-                  "0.9333839,0.4308602",
-                  "0.5896009,0.5691378",
-                  "0.5895615,0.06661606",
-                  "0.5895682,0.4308809",
-                  "0.06661606,0.5691378",
-                  "0.9333839,0.56914",
-                  "0.4103992,0.06661606",
-                  "0.06661606,0.4308809",
-                  "0.4104386,0.9333839",
-                  "0.9333839,0.5691171",
-                  "0.5895681,0.9333839",
-                  "0.06661606,0.4308627",
-                  "0.5895941,0.06661606"
-                ],
-                "TextureUAxis": [
-                  "1,-0,-0.0000001077645",
-                  "-1,-0,0.0000001077643",
-                  "0.000007728228,-1,-0.000000001826635",
-                  "-0.000007745452,1,0.000000001830706",
-                  "1,0.0000000426447,0.0001157745",
-                  "1,0.00000004267828,0.0001151091"
-                ],
-                "TextureVAxis": [
-                  "0,0,-1",
-                  "-0,0,-1",
-                  "-0.0002363589,-0.000000001826635,-1",
-                  "-0.0002363589,-0.000000001830706,-1",
-                  "0.0000000003344831,-1,-0.000002889092",
-                  "0.0000000003008976,-1,-0.000002614021"
-                ],
-                "TextureScale": [
-                  "0.25,0.25",
-                  "0.25,0.25",
-                  "0.25,0.25",
-                  "0.25,0.25",
-                  "0.25,0.25",
-                  "0.25,0.25"
-                ],
-                "TextureOffset": [
-                  "63.9999,0.8493652",
-                  "64.00011,0.8493652",
-                  "11.05127,0.8466644",
-                  "116.9487,0.8520813",
-                  "63.97621,11.05176",
-                  "63.97838,11.05176"
-                ],
-                "MaterialIndex": [
-                  5,
-                  5,
-                  5,
-                  5,
-                  5,
-                  5
-                ],
-                "EdgeFlags": [
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0
-                ],
-                "Materials": [
-                  "materials/dev/reflectivity_30.vmat",
-                  "materials/dev/dev_grating.vmat",
-                  "materials/dev/dev_hotspot_layout01.vmat",
-                  "materials/dev/dev_measuredoor_112.vmat",
-                  "materials/dev/dev_measuredoor01_vr.vmat",
-                  "materials/dev/dev_measuregeneric01.vmat",
-                  "materials/dev/dev_measuregeneric01b.vmat"
-                ]
-              },
-              "SmoothingAngle": 40,
-              "Static": true
+              "__guid": "903dba75-3913-4979-b3c6-ab258bf81e75",
+              "Flags": 0,
+              "Name": "Cube",
+              "Scale": "0.3,0.3,0.3",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "8f98a65a-7e0b-4b5e-9dc1-895a823ac020",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "0.65581,0.35485,0.16777,1"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "d8175f3c-180a-4b5b-b7c5-f15ce50228ff",
+                  "Center": "0,0,0",
+                  "IsTrigger": false,
+                  "Scale": "50,50,50",
+                  "Static": false
+                }
+              ]
             }
           ]
         }
@@ -821,14 +848,16 @@
       "__guid": "414a69b6-4b58-4c49-8c86-d6b8950f65e8",
       "Flags": 0,
       "Name": "Waypoints",
-      "Position": "0,2048,5",
+      "Position": "0,2048,0",
       "Enabled": true,
       "Components": [
         {
-          "__type": "WaypointManager",
-          "__guid": "d20b8487-0053-4656-b2ea-7223d6179221",
-          "GizmoColor": "0,0,0,1",
-          "GizmoRadius": 15.65
+          "__type": "Kira.WaypointManager",
+          "__guid": "e4733af9-5a19-4314-bc80-198554559afd",
+          "EndColor": "0,0.14581,0.79535,1",
+          "GizmoRadius": 12,
+          "StartColor": "1,1,1,1",
+          "zOffset": 12
         }
       ],
       "Children": [
@@ -894,12 +923,12 @@
       "__guid": "ae5f25f4-9970-4ad8-888e-8404e7b6d37a",
       "Flags": 0,
       "Name": "Enemy",
-      "Position": "0,2368,0",
+      "Position": "-279.9997,2468,0",
       "Rotation": "0,0,0.7071068,-0.7071068",
       "Enabled": true,
       "Components": [
         {
-          "__type": "Dresser",
+          "__type": "Kira.Dresser",
           "__guid": "a68ac904-930a-4185-8bc3-31414c3640b4",
           "Clothes": [
             "models/citizen_clothes/hair/hair_thinning_short/thinning_short.clothing",
@@ -920,17 +949,13 @@
         {
           "__type": "Sandbox.NavMeshAgent",
           "__guid": "7f397edd-20d3-4595-a1bd-5e9d21acab06",
-          "Acceleration": 50,
+          "Acceleration": 120,
           "Height": 64,
-          "MaxSpeed": 120,
+          "MaxSpeed": 140,
           "Radius": 16,
           "Separation": 0.25,
           "UpdatePosition": true,
-          "UpdateRotation": false
-        },
-        {
-          "__type": "EnemyController",
-          "__guid": "669c46f1-20da-48a4-aca7-f7df4c748adb"
+          "UpdateRotation": true
         },
         {
           "__type": "Sandbox.Citizen.CitizenAnimationHelper",
@@ -944,6 +969,30 @@
             "component_id": "37f255f9-d002-4d88-8064-3e967a96a467",
             "go": "8ce2aa8b-daab-439e-ad25-1f09f108d744",
             "component_type": "SkinnedModelRenderer"
+          }
+        },
+        {
+          "__type": "PlayerFootsteps",
+          "__guid": "a6f5d272-8ddd-4160-b73e-2bdef18970f4",
+          "Source": {
+            "_type": "component",
+            "component_id": "37f255f9-d002-4d88-8064-3e967a96a467",
+            "go": "8ce2aa8b-daab-439e-ad25-1f09f108d744",
+            "component_type": "SkinnedModelRenderer"
+          }
+        },
+        {
+          "__type": "Kira.EnemyController",
+          "__guid": "63e13429-65d0-4b28-80f7-1eaa4240cd28"
+        },
+        {
+          "__type": "Kira.EnemyStats",
+          "__guid": "28dfffcf-b37c-4490-9e18-a3c68835f2c9",
+          "Controller": {
+            "_type": "component",
+            "component_id": "63e13429-65d0-4b28-80f7-1eaa4240cd28",
+            "go": "ae5f25f4-9970-4ad8-888e-8404e7b6d37a",
+            "component_type": "EnemyController"
           }
         }
       ],
@@ -982,7 +1031,7 @@
           ],
           "Children": [
             {
-              "__guid": "9a37fd94-600d-4fce-acd0-71036293b5fd",
+              "__guid": "c27b4aeb-57cc-403c-9c98-1e478e20aa1a",
               "Flags": 0,
               "Name": "Clothing - thinning_short",
               "Tags": "clothing",
@@ -990,7 +1039,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "32cef9ca-6014-4958-b960-2dcab57c90ff",
+                  "__guid": "feae6679-716f-4b0a-be39-1a9c84396e94",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -1021,7 +1070,7 @@
               ]
             },
             {
-              "__guid": "27f30d91-c314-4b62-a726-d06407e505d9",
+              "__guid": "7312126c-bfd3-4a9d-9929-c70bd2cf18a6",
               "Flags": 0,
               "Name": "Clothing - gasmask",
               "Tags": "clothing",
@@ -1029,7 +1078,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "368f496d-8a91-4d5e-8b20-18e12dbbd444",
+                  "__guid": "dca01722-4044-452b-948c-ece8d78eda9b",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -1060,7 +1109,7 @@
               ]
             },
             {
-              "__guid": "e6e5dd3d-c388-499e-949a-6cb0bb5a194d",
+              "__guid": "6949303e-df05-4d6f-8205-0d8a84e53932",
               "Flags": 0,
               "Name": "Clothing - buttoned_shirt",
               "Tags": "clothing",
@@ -1068,7 +1117,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "531b5d2f-0bcb-4e3c-8281-44a471ddfb78",
+                  "__guid": "bec2e695-7f48-43ba-97aa-ad64ee762325",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -1099,7 +1148,7 @@
               ]
             },
             {
-              "__guid": "a6c6e06d-201e-478b-adbf-0a28287d7ec1",
+              "__guid": "710ae246-1b44-4090-a3fd-27b28d64f5df",
               "Flags": 0,
               "Name": "Clothing - rubber_gloves",
               "Tags": "clothing",
@@ -1107,7 +1156,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "ae881812-777e-414c-8794-7640d392da38",
+                  "__guid": "fedaeaef-a351-466d-8644-d6d0f9c16034",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -1138,7 +1187,7 @@
               ]
             },
             {
-              "__guid": "55267bbe-8675-4099-a27e-182cd450bcff",
+              "__guid": "697d3d6b-c1d9-4274-aa0f-3bea40bd9acf",
               "Flags": 0,
               "Name": "Clothing - jeans_black",
               "Tags": "clothing",
@@ -1146,7 +1195,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "e4b5caa0-60e1-4b27-af25-faee86128796",
+                  "__guid": "b83d9d5c-ee41-4d30-bc86-574f732d9ecf",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -1177,7 +1226,7 @@
               ]
             },
             {
-              "__guid": "7c0a5a46-3ed2-4dd6-abba-b785210ff4f4",
+              "__guid": "076ac87f-45c8-42f2-8971-3ed071daef98",
               "Flags": 0,
               "Name": "Clothing - black_boots",
               "Tags": "clothing",
@@ -1185,7 +1234,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "06e6bb70-870a-45eb-b505-28f2fbe0045b",
+                  "__guid": "7f692610-d3eb-465a-9707-5a66554dd990",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",

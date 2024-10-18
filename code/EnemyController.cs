@@ -1,3 +1,5 @@
+namespace Kira;
+
 using Sandbox.Citizen;
 
 public sealed class EnemyController : Component
@@ -8,7 +10,7 @@ public sealed class EnemyController : Component
     private WaypointManager wpManager;
     private Waypoint curWp;
 
-    private float waitTime = 0f;
+    private float waitTime = 1f;
     private TimeSince timeSinceStop;
     private bool isWaiting;
 
@@ -71,5 +73,10 @@ public sealed class EnemyController : Component
     {
         anim.WithVelocity(agent.Velocity);
         anim.WithWishVelocity(agent.WishVelocity);
+    }
+
+    public void OnHit(DamageInfo damageInfo)
+    {
+        anim.ProceduralHitReaction(damageInfo);
     }
 }
