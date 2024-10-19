@@ -6,7 +6,7 @@ public sealed class WaypointManager : Component, Component.ExecuteInEditor
 {
     [Property, Range(0, 100f)] private float GizmoRadius { get; set; } = 5f;
     [Property, Range(0, 50f)] private float zOffset { get; set; } = 5f;
-    
+
     [Property] private Color StartColor { get; set; } = Color.Cyan;
     [Property] private Color EndColor { get; set; } = Color.Magenta;
 

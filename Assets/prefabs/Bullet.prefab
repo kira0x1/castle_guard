@@ -1,0 +1,47 @@
+{
+  "RootObject": {
+    "__guid": "741ff4ab-c101-4c62-99d6-44e4eb5e3815",
+    "Flags": 0,
+    "Name": "bullet",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Kira.Bullet",
+        "__guid": "9d6cb345-24bc-4de0-8452-d15ab77a0f1a"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "2e526e96-3357-4208-a9d2-0b4e346edaec",
+        "Flags": 0,
+        "Name": "Model",
+        "Scale": "0.07,0.07,0.07",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "8968fbfc-eeab-4ad6-8ae5-36c063fce9d5",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/dev/sphere.vmdl",
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "0.14884,0.14884,0.14884,1"
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

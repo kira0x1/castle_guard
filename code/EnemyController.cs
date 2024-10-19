@@ -4,13 +4,14 @@ using Sandbox.Citizen;
 
 public sealed class EnemyController : Component
 {
+    [Property, Range(0, 10)] private float WaitTime { get; set; } = 0f;
+    [Property, Range(10, 200)] private float minDistance { get; set; } = 50f;
+
     private NavMeshAgent agent;
     private CitizenAnimationHelper anim;
-
     private WaypointManager wpManager;
     private Waypoint curWp;
 
-    private float waitTime = 1f;
     private TimeSince timeSinceStop;
     private bool isWaiting;
 
@@ -29,22 +30,22 @@ public sealed class EnemyController : Component
     {
         UpdateAnimator();
 
-        if (isWaiting && timeSinceStop < waitTime)
+        if (isWaiting && timeSinceStop < WaitTime)
         {
             return;
         }
 
-        if (isWaiting && timeSinceStop > waitTime)
+        if (isWaiting && timeSinceStop > WaitTime)
         {
             UpdateNextDestination();
         }
 
         float dist = Vector3.DistanceBetween(agent.AgentPosition, curWp.pos);
 
-        if (dist < 70f)
+        if (dist < minDistance)
         {
             timeSinceStop = 0;
-            if (waitTime > 0)
+            if (WaitTime > 0)
             {
                 agent.Stop();
                 agent.MoveTo(agent.AgentPosition);
@@ -52,10 +53,11 @@ public sealed class EnemyController : Component
                 agent.Velocity = Vector3.Zero;
                 agent.UpdateRotation = false;
                 isWaiting = true;
-                return;
             }
-
-            UpdateNextDestination();
+            else
+            {
+                UpdateNextDestination();
+            }
         }
 
         agent.MoveTo(curWp.pos);
@@ -75,8 +77,8 @@ public sealed class EnemyController : Component
         anim.WithWishVelocity(agent.WishVelocity);
     }
 
-    public void OnHit(DamageInfo damageInfo)
+    public void OnHit(DamageInfo damageInfo, Vector3 force = default)
     {
-        anim.ProceduralHitReaction(damageInfo);
+        anim.ProceduralHitReaction(damageInfo, 10f, force);
     }
 }

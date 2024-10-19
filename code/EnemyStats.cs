@@ -8,10 +8,9 @@ public class EnemyStats : Component
     [Property]
     private EnemyController Controller { get; set; }
 
-    public void TakeDamage(float damage, GameObject attacker)
+    public void TakeDamage(DamageInfo info, Vector3 velocity = default)
     {
-        Health -= damage;
-        DamageInfo info = new DamageInfo(damage, attacker, attacker);
-        Controller.OnHit(info);
+        Health -= info.Damage;
+        Controller.OnHit(info, velocity);
     }
 }

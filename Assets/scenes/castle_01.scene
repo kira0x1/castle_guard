@@ -145,7 +145,7 @@
           ],
           "Children": [
             {
-              "__guid": "b584eddf-3bc8-43fa-b60d-5eadb023f590",
+              "__guid": "762ee980-8e52-4177-9f43-c157980ce8eb",
               "Flags": 0,
               "Name": "Clothing - army_boots",
               "Tags": "clothing",
@@ -153,7 +153,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "56133bf2-4302-46c4-93b7-4e4a97aa7203",
+                  "__guid": "2ed1498d-ee36-4937-9c03-1bc99fea0276",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -184,7 +184,7 @@
               ]
             },
             {
-              "__guid": "fdd66a1e-28bd-4e6d-ab14-b2215c300c88",
+              "__guid": "5369f167-ad33-4227-8526-c3ef8c358af6",
               "Flags": 0,
               "Name": "Clothing - hoodie_black",
               "Tags": "clothing",
@@ -192,7 +192,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "504165e4-4acc-4faf-a403-76eae4cf53c7",
+                  "__guid": "4dfee2fd-72fa-4cf4-9e72-462bbc36c1e2",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -223,7 +223,7 @@
               ]
             },
             {
-              "__guid": "520983e7-5fb7-4a00-ba59-3a5482861703",
+              "__guid": "7d4333cc-5831-4601-b599-0f4fae907b56",
               "Flags": 0,
               "Name": "Clothing - brown_cargo_pants",
               "Tags": "clothing",
@@ -231,7 +231,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "f560c31e-5d77-4630-9391-0dcc41e24858",
+                  "__guid": "c0c9eb8d-97d2-4866-8b75-e6c1a5ddcc67",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -262,7 +262,7 @@
               ]
             },
             {
-              "__guid": "16a77c7c-0a9f-4784-8e81-8ac75f6f07a3",
+              "__guid": "573efedc-8ad8-41a0-9c3e-4de3b8bed762",
               "Flags": 0,
               "Name": "Clothing - nerdy_glasses",
               "Tags": "clothing",
@@ -270,7 +270,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "a9523d0d-7726-4de3-9899-1a817b5f72db",
+                  "__guid": "e8ea08fc-585d-40e2-b9f2-41574a0135a7",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -301,7 +301,7 @@
               ]
             },
             {
-              "__guid": "a5aab3f7-2a0d-47f1-8d0b-2d576ffeade1",
+              "__guid": "65a79dcd-295c-48ed-b492-a9124193080a",
               "Flags": 0,
               "Name": "Clothing - hair.loose.grey",
               "Tags": "clothing",
@@ -309,7 +309,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "e8a51ace-c42e-4b7d-ba4d-9a4799de69ac",
+                  "__guid": "625539de-1a52-474e-9d78-5d4a131b24e3",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -575,6 +575,89 @@
               "Scale": 0.025
             }
           ]
+        },
+        {
+          "__guid": "414a69b6-4b58-4c49-8c86-d6b8950f65e8",
+          "Flags": 0,
+          "Name": "Waypoints",
+          "Position": "416,-271.9998,0",
+          "Rotation": "0,0,-0.7071066,0.7071067",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Kira.WaypointManager",
+              "__guid": "e4733af9-5a19-4314-bc80-198554559afd",
+              "EndColor": "0,0.14581,0.79535,1",
+              "GizmoRadius": 12,
+              "StartColor": "1,1,1,1",
+              "zOffset": 12
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "83944f50-8847-4ea6-99e0-9331428ab85e",
+              "Flags": 0,
+              "Name": "Waypoint 1",
+              "Position": "0,256,0",
+              "Enabled": true
+            },
+            {
+              "__guid": "10d6126e-dbb1-4836-8ee9-7821f7b9087b",
+              "Flags": 0,
+              "Name": "Waypoint 2",
+              "Position": "192,192,0",
+              "Enabled": true
+            },
+            {
+              "__guid": "aec2a0e5-1de4-456b-81ae-e5601e5f4544",
+              "Flags": 0,
+              "Name": "Waypoint 3",
+              "Position": "256,0,0",
+              "Enabled": true
+            },
+            {
+              "__guid": "15d828f7-286f-41cf-9e9d-f2203662e202",
+              "Flags": 0,
+              "Name": "Waypoint 4",
+              "Position": "192,-192,0",
+              "Enabled": true
+            },
+            {
+              "__guid": "fad4a77b-6baf-4eff-85e0-48aaa656d153",
+              "Flags": 0,
+              "Name": "Waypoint 5",
+              "Position": "64,-256,0",
+              "Enabled": true
+            },
+            {
+              "__guid": "8bd5bebe-0655-4523-abdd-b03835d3b227",
+              "Flags": 0,
+              "Name": "Waypoint 6",
+              "Position": "-64,-256,0",
+              "Enabled": true
+            },
+            {
+              "__guid": "4c0d1034-c852-430f-bd4a-081d01cf368c",
+              "Flags": 0,
+              "Name": "Waypoint 7",
+              "Position": "-192,-192,0",
+              "Enabled": true
+            },
+            {
+              "__guid": "ac295aaf-34e7-4660-aea0-63668038c2aa",
+              "Flags": 0,
+              "Name": "Waypoint 8",
+              "Position": "-256,0,0",
+              "Enabled": true
+            },
+            {
+              "__guid": "fc72c6c8-6b04-4bd8-9324-1043299d39d4",
+              "Flags": 0,
+              "Name": "Waypoint 9",
+              "Position": "-192,192,0",
+              "Enabled": true
+            }
+          ]
         }
       ]
     },
@@ -615,311 +698,6 @@
       ]
     },
     {
-      "__guid": "70fa216c-7a48-424c-ae22-892d8424286a",
-      "Flags": 0,
-      "Name": "Turret",
-      "Position": "0,2048,0",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Kira.Turret",
-          "__guid": "1426c209-1a4b-4b6d-b1c5-1bf6231f745d",
-          "Damage": 20,
-          "FireRate": 0.2,
-          "Nozzle": {
-            "_type": "gameobject",
-            "go": "4e89b3cd-e842-4e12-9494-8ee6f59a8f56"
-          },
-          "Target": {
-            "_type": "gameobject",
-            "go": "ae5f25f4-9970-4ad8-888e-8404e7b6d37a"
-          },
-          "TurnSpeed": 0.15
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "40926bd6-523a-468b-95c7-af9767b6a656",
-          "Flags": 0,
-          "Name": "Box",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "1c7c4ff9-c686-4c6f-8e73-95de3442ab57",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/citizen_props/crate01.vmdl",
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "3c0000e9-95bf-44d1-87bd-5b73b2b94cb5",
-              "IsTrigger": false,
-              "Model": "models/citizen_props/crate01.vmdl",
-              "Static": false
-            }
-          ]
-        },
-        {
-          "__guid": "4e89b3cd-e842-4e12-9494-8ee6f59a8f56",
-          "Flags": 0,
-          "Name": "Nozzle",
-          "Position": "0,0,48",
-          "Rotation": "0,0,0.7071067,0.7071068",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "40412d72-10ec-4425-aa2a-b23501e97305",
-              "Flags": 0,
-              "Name": "nozzle_model",
-              "Position": "7.027343,-0.0002210647,-0.001102448",
-              "Rotation": "0.5,-0.4999999,-0.4999999,0.5",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.MeshComponent",
-                  "__guid": "c6907277-d179-4ce2-bfdd-f2743d5d77d3",
-                  "Collision": "Mesh",
-                  "Color": "1,1,1,1",
-                  "HideInGame": false,
-                  "IsTrigger": false,
-                  "Mesh": {
-                    "Topology": "H4sIAAAAAAAACl2Qiw6CUAxDh1flgg/wAfr/X2pP0iWLJA25W9t16xHxFc4C30E4\u002Bt2FWbgKd2Ew4NTvIZxcb9ZH4b5db\u002Bb9z/oUzVh8m7lPc9FOzjRYQ8ZXyXxxXvrw4e72wvtWdoEPdzMXj8We9OHDXcvO7EqdN396eKaeLHjkLciePeYxi4z0mMFtMisablFvRXZ2Tj158KQOF78f9WSROMQBAAA=",
-                    "Positions": [
-                      "-2.867012,-2.000137,-0.0000001192175",
-                      "2.866181,-1.999477,-0.0000001191781",
-                      "2.867226,2.424736,0.0000001445255",
-                      "-2.865966,2.424072,0.000000144486",
-                      "-2.866181,2.424157,-20.44531",
-                      "2.867012,2.424817,-20.44531",
-                      "2.865966,-1.999404,-20.44531",
-                      "-2.867226,-2.000067,-20.44531"
-                    ],
-                    "TextureCoord": [
-                      "0.5895681,-1.430881",
-                      "0.410406,-57.64005",
-                      "0.5896008,-1.569138",
-                      "58.64005,-1.430881",
-                      "0.4104387,-1.569117",
-                      "0.5896008,-57.64005",
-                      "0.4104059,-1.43086",
-                      "-57.64005,-1.569116",
-                      "0.4104059,-1.56914",
-                      "0.4104319,-58.27896",
-                      "0.4104387,-1.430883",
-                      "59.27896,-1.56914",
-                      "0.5896009,-1.430862",
-                      "0.5895616,-58.27896",
-                      "0.5895682,-1.569119",
-                      "-58.27896,-1.430862",
-                      "-57.64005,-1.43086",
-                      "0.4103994,-58.27896",
-                      "-58.27896,-1.569119",
-                      "0.4104386,-57.64005",
-                      "59.27896,-1.430883",
-                      "0.5895682,-57.64005",
-                      "58.64005,-1.569137",
-                      "0.5895941,-58.27896"
-                    ],
-                    "TextureUAxis": [
-                      "1,-0,0.0000004851423",
-                      "-1,-0,-0.0000004849944",
-                      "0.00001046097,-1,-0.000000002470851",
-                      "-0.00001050761,1,0.000000002484133",
-                      "1,0.00000001122904,0.0001151091",
-                      "1,0.0000001512055,0.0001151091"
-                    ],
-                    "TextureVAxis": [
-                      "-0.000001995813,0,-1",
-                      "-0.000001996015,0,-1",
-                      "-0.0002361972,0.0000003706928,-1",
-                      "-0.0002364128,0.0000001840963,-1",
-                      "0.0000000004296809,-1,-0.000003732815",
-                      "0.0000000003867267,-1,-0.000003359654"
-                    ],
-                    "TextureScale": [
-                      "0.2500001,0.2499994",
-                      "0.25,0.2499998",
-                      "0.2500015,0.2499998",
-                      "0.2500015,0.25",
-                      "0.2500001,0.2500015",
-                      "0.2500001,0.2500015"
-                    ],
-                    "TextureOffset": [
-                      "63.99902,0.8453827",
-                      "64.00099,0.8451233",
-                      "74.13379,0.8393555",
-                      "53.86621,0.8460999",
-                      "63.9758,74.13477",
-                      "63.9767,74.13525"
-                    ],
-                    "MaterialIndex": [
-                      5,
-                      5,
-                      5,
-                      5,
-                      5,
-                      5
-                    ],
-                    "EdgeFlags": [
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0
-                    ],
-                    "Materials": [
-                      "materials/dev/reflectivity_30.vmat",
-                      "materials/dev/dev_grating.vmat",
-                      "materials/dev/dev_hotspot_layout01.vmat",
-                      "materials/dev/dev_measuredoor_112.vmat",
-                      "materials/dev/dev_measuredoor01_vr.vmat",
-                      "materials/dev/dev_measuregeneric01.vmat",
-                      "materials/dev/dev_measuregeneric01b.vmat"
-                    ]
-                  },
-                  "SmoothingAngle": 40,
-                  "Static": true
-                }
-              ]
-            },
-            {
-              "__guid": "903dba75-3913-4979-b3c6-ab258bf81e75",
-              "Flags": 0,
-              "Name": "Cube",
-              "Scale": "0.3,0.3,0.3",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "8f98a65a-7e0b-4b5e-9dc1-895a823ac020",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/dev/box.vmdl",
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "0.65581,0.35485,0.16777,1"
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "d8175f3c-180a-4b5b-b7c5-f15ce50228ff",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "__guid": "414a69b6-4b58-4c49-8c86-d6b8950f65e8",
-      "Flags": 0,
-      "Name": "Waypoints",
-      "Position": "0,2048,0",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Kira.WaypointManager",
-          "__guid": "e4733af9-5a19-4314-bc80-198554559afd",
-          "EndColor": "0,0.14581,0.79535,1",
-          "GizmoRadius": 12,
-          "StartColor": "1,1,1,1",
-          "zOffset": 12
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "83944f50-8847-4ea6-99e0-9331428ab85e",
-          "Flags": 0,
-          "Name": "Waypoint 1",
-          "Position": "0,256,0",
-          "Enabled": true
-        },
-        {
-          "__guid": "10d6126e-dbb1-4836-8ee9-7821f7b9087b",
-          "Flags": 0,
-          "Name": "Waypoint 2",
-          "Position": "192,192,0",
-          "Enabled": true
-        },
-        {
-          "__guid": "aec2a0e5-1de4-456b-81ae-e5601e5f4544",
-          "Flags": 0,
-          "Name": "Waypoint 3",
-          "Position": "256,0,0",
-          "Enabled": true
-        },
-        {
-          "__guid": "15d828f7-286f-41cf-9e9d-f2203662e202",
-          "Flags": 0,
-          "Name": "Waypoint 4",
-          "Position": "192,-192,0",
-          "Enabled": true
-        },
-        {
-          "__guid": "fad4a77b-6baf-4eff-85e0-48aaa656d153",
-          "Flags": 0,
-          "Name": "Waypoint 5",
-          "Position": "0,-256,0",
-          "Enabled": true
-        },
-        {
-          "__guid": "4c0d1034-c852-430f-bd4a-081d01cf368c",
-          "Flags": 0,
-          "Name": "Waypoint 6",
-          "Position": "-192,-192,0",
-          "Enabled": true
-        },
-        {
-          "__guid": "ac295aaf-34e7-4660-aea0-63668038c2aa",
-          "Flags": 0,
-          "Name": "Waypoint 7",
-          "Position": "-256,0,0",
-          "Enabled": true
-        },
-        {
-          "__guid": "fc72c6c8-6b04-4bd8-9324-1043299d39d4",
-          "Flags": 0,
-          "Name": "Waypoint 8",
-          "Position": "-192,192,0",
-          "Enabled": true
-        }
-      ]
-    },
-    {
       "__guid": "ae5f25f4-9970-4ad8-888e-8404e7b6d37a",
       "Flags": 0,
       "Name": "Enemy",
@@ -952,8 +730,8 @@
           "Acceleration": 120,
           "Height": 64,
           "MaxSpeed": 140,
-          "Radius": 16,
-          "Separation": 0.25,
+          "Radius": 12,
+          "Separation": 0.2,
           "UpdatePosition": true,
           "UpdateRotation": true
         },
@@ -983,7 +761,9 @@
         },
         {
           "__type": "Kira.EnemyController",
-          "__guid": "63e13429-65d0-4b28-80f7-1eaa4240cd28"
+          "__guid": "63e13429-65d0-4b28-80f7-1eaa4240cd28",
+          "minDistance": 72.17,
+          "WaitTime": 0
         },
         {
           "__type": "Kira.EnemyStats",
@@ -1031,7 +811,7 @@
           ],
           "Children": [
             {
-              "__guid": "c27b4aeb-57cc-403c-9c98-1e478e20aa1a",
+              "__guid": "fa734faa-caaf-4169-ad1b-c22b6c0d59e8",
               "Flags": 0,
               "Name": "Clothing - thinning_short",
               "Tags": "clothing",
@@ -1039,7 +819,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "feae6679-716f-4b0a-be39-1a9c84396e94",
+                  "__guid": "9e289373-94fe-4969-8e50-7265f668e55e",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -1070,7 +850,7 @@
               ]
             },
             {
-              "__guid": "7312126c-bfd3-4a9d-9929-c70bd2cf18a6",
+              "__guid": "8e26f292-c92f-4d97-82f5-a53179fd0d56",
               "Flags": 0,
               "Name": "Clothing - gasmask",
               "Tags": "clothing",
@@ -1078,7 +858,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "dca01722-4044-452b-948c-ece8d78eda9b",
+                  "__guid": "078f56fe-1b14-4f2c-8343-b458fffe18d4",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -1109,7 +889,7 @@
               ]
             },
             {
-              "__guid": "6949303e-df05-4d6f-8205-0d8a84e53932",
+              "__guid": "71b2ff93-e8e0-4b78-a1e2-7d800935f74c",
               "Flags": 0,
               "Name": "Clothing - buttoned_shirt",
               "Tags": "clothing",
@@ -1117,7 +897,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "bec2e695-7f48-43ba-97aa-ad64ee762325",
+                  "__guid": "50c11473-da03-4678-b220-406cbc12de0f",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -1148,7 +928,7 @@
               ]
             },
             {
-              "__guid": "710ae246-1b44-4090-a3fd-27b28d64f5df",
+              "__guid": "237aec8e-de85-4da5-abe9-beff92f18d6b",
               "Flags": 0,
               "Name": "Clothing - rubber_gloves",
               "Tags": "clothing",
@@ -1156,7 +936,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "fedaeaef-a351-466d-8644-d6d0f9c16034",
+                  "__guid": "1fb5ce07-080f-442a-a240-2e389036a156",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -1187,7 +967,7 @@
               ]
             },
             {
-              "__guid": "697d3d6b-c1d9-4274-aa0f-3bea40bd9acf",
+              "__guid": "f4ed814d-237d-4909-9d30-542bce99cd2c",
               "Flags": 0,
               "Name": "Clothing - jeans_black",
               "Tags": "clothing",
@@ -1195,7 +975,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "b83d9d5c-ee41-4d30-bc86-574f732d9ecf",
+                  "__guid": "8356b2e8-68d3-4f50-b58d-549b72fc3b46",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -1226,7 +1006,7 @@
               ]
             },
             {
-              "__guid": "076ac87f-45c8-42f2-8971-3ed071daef98",
+              "__guid": "539551f9-a540-41c4-99e7-7442f6e79b4f",
               "Flags": 0,
               "Name": "Clothing - black_boots",
               "Tags": "clothing",
@@ -1234,7 +1014,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "7f692610-d3eb-465a-9707-5a66554dd990",
+                  "__guid": "ca688205-ecb1-4ba8-8b52-7a68d082566d",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -1267,6 +1047,155 @@
           ]
         }
       ]
+    },
+    {
+      "__guid": "70fa216c-7a48-424c-ae22-892d8424286a",
+      "Flags": 0,
+      "Name": "Turret",
+      "Position": "0,2048,0",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Kira.Turret",
+          "__guid": "1426c209-1a4b-4b6d-b1c5-1bf6231f745d",
+          "BulletPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/bullet.prefab"
+          },
+          "Damage": 20,
+          "FirePos": {
+            "_type": "gameobject",
+            "go": "2e1af7d4-8ab1-44b6-a5b8-9096129355a2"
+          },
+          "FireRate": 1,
+          "ForwardPredictionAim": 0.25,
+          "MinShootDistance": 803.16,
+          "MuzzleFlash": "particles/pistol_muzzleflash.vpcf",
+          "MuzzleSmoke": "particles/impact.generic.smokepuff.vpcf",
+          "Nozzle": {
+            "_type": "gameobject",
+            "go": "4e89b3cd-e842-4e12-9494-8ee6f59a8f56"
+          },
+          "ShowAimPrediction": false,
+          "ShowShootRadius": false,
+          "Target": {
+            "_type": "gameobject",
+            "go": "ae5f25f4-9970-4ad8-888e-8404e7b6d37a"
+          },
+          "TurnSmoothing": 0.04
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "40926bd6-523a-468b-95c7-af9767b6a656",
+          "Flags": 0,
+          "Name": "Box",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "1c7c4ff9-c686-4c6f-8e73-95de3442ab57",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/citizen_props/crate01.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "3c0000e9-95bf-44d1-87bd-5b73b2b94cb5",
+              "IsTrigger": false,
+              "Model": "models/citizen_props/crate01.vmdl",
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "4e89b3cd-e842-4e12-9494-8ee6f59a8f56",
+          "Flags": 0,
+          "Name": "Nozzle",
+          "Position": "0,0,48",
+          "Rotation": "0,0,0.7071067,0.7071068",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "94fdf11f-aed5-4dd7-a0ba-e94bd7e9afb8",
+              "Flags": 0,
+              "Name": "nozzle_model",
+              "Position": "16.83081,-0.0000000001598437,0",
+              "Scale": "0.4,0.1,0.1",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "da08b316-8e04-49f7-aa4e-0f7ca5d6a2af",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,0,0.41667,1"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "ec600b55-257e-46c0-bb19-3ef31ae23751",
+                  "Center": "0,0,0",
+                  "IsTrigger": false,
+                  "Scale": "50,50,50",
+                  "Static": false
+                }
+              ]
+            },
+            {
+              "__guid": "903dba75-3913-4979-b3c6-ab258bf81e75",
+              "Flags": 0,
+              "Name": "nozzleBox_model",
+              "Scale": "0.3,0.3,0.3",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "8f98a65a-7e0b-4b5e-9dc1-895a823ac020",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "0.24651,0.13904,0.07223,1"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "d8175f3c-180a-4b5b-b7c5-f15ce50228ff",
+                  "Center": "0,0,0",
+                  "IsTrigger": false,
+                  "Scale": "50,50,50",
+                  "Static": false
+                }
+              ]
+            },
+            {
+              "__guid": "2e1af7d4-8ab1-44b6-a5b8-9096129355a2",
+              "Flags": 0,
+              "Name": "shoot_pos",
+              "Position": "28.47607,-0.0000000003196874,0",
+              "Enabled": true
+            }
+          ]
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -1281,11 +1210,11 @@
     "NavMesh": {
       "Enabled": true,
       "IncludeStaticBodies": true,
-      "IncludeKeyframedBodies": true,
+      "IncludeKeyframedBodies": false,
       "EditorAutoUpdate": true,
-      "AgentHeight": 64,
+      "AgentHeight": 68,
       "AgentRadius": 16,
-      "AgentStepSize": 18,
+      "AgentStepSize": 22,
       "AgentMaxSlope": 40,
       "ExcludedBodies": "",
       "IncludedBodies": ""
