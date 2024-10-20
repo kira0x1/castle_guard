@@ -2,17 +2,25 @@
 
 public class Bullet : Component
 {
+    [Property] public ParticleSystem OnHitParticles { get; set; }
+
     public GameObject Attacker { get; set; }
     public GameObject Target { get; set; }
     public float Damage { get; set; }
 
-    private Vector3 velocity;
-
     private const float bulletSpeed = 800;
     private const float minDistance = 35f;
 
+    private TimeSince timeSinceSpawn = 0;
+
     protected override void OnUpdate()
     {
+        if (timeSinceSpawn > 8)
+        {
+            GameObject.Destroy();
+            return;
+        }
+
         var tpos = Target.WorldPosition.WithZ(WorldPosition.z);
         WorldPosition += LocalTransform.Forward * bulletSpeed * Time.Delta;
 
@@ -29,16 +37,10 @@ public class Bullet : Component
         var enemy = Target.GetComponent<EnemyStats>();
         if (enemy.IsValid())
         {
-            var info = new DamageInfo(Damage, Attacker, null);
-            enemy.TakeDamage(info, WorldTransform.Forward * (Damage * 5f));
+            var info = new DamageInfo(Damage, Attacker, Attacker);
+            enemy.TakeDamage(info, WorldTransform.Forward * (Damage * 5f), WorldPosition);
         }
 
         GameObject.Destroy();
-    }
-
-    private void Smooth()
-    {
-        var tpos = Target.WorldPosition.WithZ(WorldPosition.z);
-        WorldPosition = Vector3.SmoothDamp(WorldPosition, tpos, ref velocity, 0.6f, Time.Delta);
     }
 }
