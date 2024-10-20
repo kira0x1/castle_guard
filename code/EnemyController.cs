@@ -8,12 +8,29 @@ public sealed class EnemyController : Component
     [Property, Range(10, 200)] private float minDistance { get; set; } = 50f;
 
     private NavMeshAgent agent;
+    private bool canReachPos;
     private CitizenAnimationHelper anim;
     private WaypointManager wpManager;
     private Waypoint curWp;
 
+    private TimeSince timeSinceLastAttack;
+
+    private enum EnemyStates
+    {
+        MOVING,
+        FIGHTING,
+        DEAD
+    }
+
+    private EnemyStates CurState;
+
+    private bool hasTarget;
+    private Obstacle obstacleTarget;
+
     private TimeSince timeSinceStop;
     private bool isWaiting;
+
+    private Vector3 NextPathPointPos { get; set; }
 
     protected override void OnStart()
     {
@@ -28,18 +45,96 @@ public sealed class EnemyController : Component
 
     protected override void OnUpdate()
     {
+        Log.Info(CurState);
         UpdateAnimator();
 
-        if (isWaiting && timeSinceStop < WaitTime)
+        if (CurState == EnemyStates.MOVING)
         {
-            return;
-        }
+            if (isWaiting)
+            {
+                Log.Info("is waiting");
+                if (timeSinceStop > WaitTime)
+                {
+                    UpdateNextDestination();
+                }
+                else
+                {
+                    return;
+                }
+            }
 
-        if (isWaiting && timeSinceStop > WaitTime)
+            var tpos = agent.GetLookAhead(100f);
+            var path = Scene.NavMesh.GetSimplePath(agent.AgentPosition, curWp.pos);
+
+            foreach (Vector3 p in path)
+            {
+                Gizmo.Draw.Color = Color.Blue;
+                Gizmo.Draw.LineSphere(p, 15f);
+            }
+
+            if (path.Count > 0)
+            {
+                var endPoint = path[^1];
+                float reachDist = Vector3.DistanceBetween(endPoint, curWp.pos);
+                canReachPos = reachDist < 5f;
+
+                if (!canReachPos && !hasTarget)
+                {
+                    // find closest barricade
+                    var obstacles = Scene.GetAllComponents<Obstacle>().ToList();
+                    Obstacle closestObs = obstacles[0];
+                    float closestDist = 9000f;
+
+                    foreach (Obstacle obs in obstacles)
+                    {
+                        float dist = Vector3.DistanceBetween(obs.WorldPosition, endPoint);
+                        if (dist < closestDist)
+                        {
+                            closestDist = dist;
+                            closestObs = obs;
+                        }
+                    }
+
+                    obstacleTarget = closestObs;
+                    hasTarget = true;
+                    CurState = EnemyStates.FIGHTING;
+                }
+            }
+
+            Gizmo.Draw.Color = Color.Blue;
+            Gizmo.Draw.LineSphere(tpos, 10f);
+
+
+            HandleWaypoints();
+        }
+        else if (CurState == EnemyStates.FIGHTING)
         {
-            UpdateNextDestination();
-        }
+            if (!hasTarget || !obstacleTarget.IsValid())
+            {
+                CurState = EnemyStates.MOVING;
+                return;
+            }
 
+            Gizmo.Draw.Color = Color.Yellow;
+            Gizmo.Draw.LineCircle(obstacleTarget.WorldPosition, 10f);
+
+            agent.MoveTo(obstacleTarget.WorldPosition);
+            float dist = Vector3.DistanceBetween(agent.WorldPosition, obstacleTarget.WorldPosition);
+
+            if (dist < 50)
+            {
+                if (timeSinceLastAttack > 0.3f)
+                {
+                    anim.TriggerJump();
+                    obstacleTarget.prop.OnDamage(new DamageInfo(20f, GameObject, GameObject));
+                    timeSinceLastAttack = 0f;
+                }
+            }
+        }
+    }
+
+    private void HandleWaypoints()
+    {
         float dist = Vector3.DistanceBetween(agent.AgentPosition, curWp.pos);
 
         if (dist < minDistance)

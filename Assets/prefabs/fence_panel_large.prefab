@@ -1,0 +1,52 @@
+{
+  "RootObject": {
+    "__guid": "6af3a6e7-e657-4fef-94bc-55b7124b002b",
+    "Flags": 0,
+    "Name": "fence_panel_large",
+    "Tags": "barricade",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.Prop",
+        "__guid": "9eecad81-9564-46e9-85b3-3ee2ca3af48c",
+        "BodyGroups": 18446744073709551615,
+        "Health": 100,
+        "IsStatic": true,
+        "Model": "models/props/temporary_fencing/fence_panel_large.vmdl",
+        "OnPropTakeDamage": {
+          "__version": 8,
+          "__guid": "e5926bc3-b1b5-4cc0-b6e2-4f7ac2d8de7d",
+          "__changeId": 1,
+          "UserData": {
+            "Title": "On Prop Take Damage"
+          },
+          "Variables": [],
+          "Nodes": [
+            {
+              "Id": 0,
+              "Type": "input"
+            }
+          ],
+          "Links": []
+        },
+        "StartAsleep": false,
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Kira.Obstacle",
+        "__guid": "91249620-b664-4ad8-8c59-60c1823b798c"
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [
+    "facepunch.fence_panel_large#44051"
+  ],
+  "__version": 1
+}

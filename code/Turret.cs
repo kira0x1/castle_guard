@@ -33,6 +33,13 @@ public sealed class Turret : Component
     {
         base.OnStart();
         fireRateMs = 1 / FireRate;
+
+        var enemy = Scene.GetAllComponents<EnemyController>().FirstOrDefault();
+
+        if (enemy.IsValid())
+        {
+            Target = enemy.GameObject;
+        }
     }
 
     protected override void OnUpdate()

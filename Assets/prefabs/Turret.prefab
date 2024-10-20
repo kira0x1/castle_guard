@@ -1,0 +1,157 @@
+{
+  "RootObject": {
+    "__guid": "70fa216c-7a48-424c-ae22-892d8424286a",
+    "Flags": 0,
+    "Name": "turret",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Kira.Turret",
+        "__guid": "1426c209-1a4b-4b6d-b1c5-1bf6231f745d",
+        "BulletPrefab": {
+          "_type": "gameobject",
+          "prefab": "prefabs/bullet.prefab"
+        },
+        "Damage": 20,
+        "FirePos": {
+          "_type": "gameobject",
+          "go": "2e1af7d4-8ab1-44b6-a5b8-9096129355a2"
+        },
+        "FireRate": 1,
+        "ForwardPredictionAim": 0.5,
+        "MinShootDistance": 431.77,
+        "MuzzleFlash": "particles/pistol_muzzleflash.vpcf",
+        "MuzzleSmoke": "particles/impact.generic.smokepuff.vpcf",
+        "Nozzle": {
+          "_type": "gameobject",
+          "go": "4e89b3cd-e842-4e12-9494-8ee6f59a8f56"
+        },
+        "ShowAimPrediction": false,
+        "ShowShootRadius": false,
+        "TurnSmoothing": 0.01
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "40926bd6-523a-468b-95c7-af9767b6a656",
+        "Flags": 0,
+        "Name": "Box",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "1c7c4ff9-c686-4c6f-8e73-95de3442ab57",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/citizen_props/crate01.vmdl",
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "3c0000e9-95bf-44d1-87bd-5b73b2b94cb5",
+            "IsTrigger": false,
+            "Model": "models/citizen_props/crate01.vmdl",
+            "Static": false,
+            "SurfaceVelocity": "0,0,0"
+          }
+        ]
+      },
+      {
+        "__guid": "4e89b3cd-e842-4e12-9494-8ee6f59a8f56",
+        "Flags": 0,
+        "Name": "Nozzle",
+        "Position": "0,0,48",
+        "Rotation": "0,0,0.7071067,0.7071068",
+        "Enabled": true,
+        "Children": [
+          {
+            "__guid": "94fdf11f-aed5-4dd7-a0ba-e94bd7e9afb8",
+            "Flags": 0,
+            "Name": "nozzle_model",
+            "Position": "16.83081,-0.0000000001598437,0",
+            "Scale": "0.4,0.1,0.1",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "da08b316-8e04-49f7-aa4e-0f7ca5d6a2af",
+                "BodyGroups": 18446744073709551615,
+                "Model": "models/dev/box.vmdl",
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,0,0.41667,1"
+              },
+              {
+                "__type": "Sandbox.BoxCollider",
+                "__guid": "ec600b55-257e-46c0-bb19-3ef31ae23751",
+                "Center": "0,0,0",
+                "IsTrigger": false,
+                "Scale": "50,50,50",
+                "Static": false,
+                "SurfaceVelocity": "0,0,0"
+              }
+            ]
+          },
+          {
+            "__guid": "903dba75-3913-4979-b3c6-ab258bf81e75",
+            "Flags": 0,
+            "Name": "nozzleBox_model",
+            "Scale": "0.3,0.3,0.3",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "8f98a65a-7e0b-4b5e-9dc1-895a823ac020",
+                "BodyGroups": 18446744073709551615,
+                "Model": "models/dev/box.vmdl",
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "0.24651,0.13904,0.07223,1"
+              },
+              {
+                "__type": "Sandbox.BoxCollider",
+                "__guid": "d8175f3c-180a-4b5b-b7c5-f15ce50228ff",
+                "Center": "0,0,0",
+                "IsTrigger": false,
+                "Scale": "50,50,50",
+                "Static": false,
+                "SurfaceVelocity": "0,0,0"
+              }
+            ]
+          },
+          {
+            "__guid": "2e1af7d4-8ab1-44b6-a5b8-9096129355a2",
+            "Flags": 0,
+            "Name": "shoot_pos",
+            "Position": "28.47607,-0.0000000003196874,0",
+            "Enabled": true
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
