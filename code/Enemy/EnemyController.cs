@@ -68,6 +68,7 @@ public partial class EnemyController : Component
         {
             if (!hasTarget || !obstacleTarget.IsValid())
             {
+                hasTarget = false;
                 CurState = EnemyStates.MOVING;
                 return;
             }

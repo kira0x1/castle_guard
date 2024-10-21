@@ -146,7 +146,7 @@
           ],
           "Children": [
             {
-              "__guid": "4149e46f-37f0-41b6-b642-30b29d7761b9",
+              "__guid": "215b9841-4d83-4abf-bc2f-d89b81f41356",
               "Flags": 0,
               "Name": "Clothing - army_boots",
               "Tags": "clothing",
@@ -154,7 +154,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "a63ef641-5a01-452f-989d-23cb63f5ff3f",
+                  "__guid": "1c29680f-cde6-46bb-8eaf-9e2bde9beda3",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -185,7 +185,7 @@
               ]
             },
             {
-              "__guid": "b4acb975-220c-473f-86ee-8b45333f24b6",
+              "__guid": "c0ba25be-a23c-4915-967b-f85f83aaf514",
               "Flags": 0,
               "Name": "Clothing - hoodie_black",
               "Tags": "clothing",
@@ -193,7 +193,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "d3ff115f-eb44-486a-aa43-7a1ab5a7b6fe",
+                  "__guid": "07381d3d-cd50-492d-b3dc-3c4e3f1b6ff3",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -224,7 +224,7 @@
               ]
             },
             {
-              "__guid": "165e4a41-3524-400d-adfe-abcdccb9a495",
+              "__guid": "9fe244ee-353c-49ea-817a-c9daaeeb95f3",
               "Flags": 0,
               "Name": "Clothing - brown_cargo_pants",
               "Tags": "clothing",
@@ -232,7 +232,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "c82d9175-a4a4-44da-95b3-9fcf64d0cc7a",
+                  "__guid": "9484d36a-795e-4953-8393-46911e6dc0c3",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -263,7 +263,7 @@
               ]
             },
             {
-              "__guid": "d5da055a-3071-4969-a8bf-fa6bb1dfc051",
+              "__guid": "7bfcee88-b3bd-4de7-87f4-73f7f6d16c9d",
               "Flags": 0,
               "Name": "Clothing - nerdy_glasses",
               "Tags": "clothing",
@@ -271,7 +271,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "c3b1970a-d1c2-4c0d-85a6-127fc014a913",
+                  "__guid": "646f685e-a198-41c4-ad8f-2480d8ed04f7",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -302,7 +302,7 @@
               ]
             },
             {
-              "__guid": "1d0bdbe6-5575-4e90-aa32-7d0e5d9d3e48",
+              "__guid": "2788ca76-0cdf-4b7a-a5e8-727f3c393597",
               "Flags": 0,
               "Name": "Clothing - hair.loose.grey",
               "Tags": "clothing",
@@ -310,7 +310,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "fd148708-7247-4fb6-b988-4e7aec8758bc",
+                  "__guid": "3bb0e13a-94dc-498e-a251-5b1e769fec5b",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -640,59 +640,31 @@
           "Enabled": true
         },
         {
-          "__guid": "10d6126e-dbb1-4836-8ee9-7821f7b9087b",
-          "Flags": 0,
-          "Name": "Waypoint 2",
-          "Position": "192,192,0",
-          "Enabled": true
-        },
-        {
-          "__guid": "aec2a0e5-1de4-456b-81ae-e5601e5f4544",
-          "Flags": 0,
-          "Name": "Waypoint 3",
-          "Position": "256,0,0",
-          "Enabled": true
-        },
-        {
           "__guid": "15d828f7-286f-41cf-9e9d-f2203662e202",
           "Flags": 0,
-          "Name": "Waypoint 4",
-          "Position": "192,-192,0",
+          "Name": "Waypoint 2",
+          "Position": "384.0002,-80,0",
           "Enabled": true
         },
         {
           "__guid": "fad4a77b-6baf-4eff-85e0-48aaa656d153",
           "Flags": 0,
-          "Name": "Waypoint 5",
-          "Position": "64,-256,0",
-          "Enabled": true
-        },
-        {
-          "__guid": "8bd5bebe-0655-4523-abdd-b03835d3b227",
-          "Flags": 0,
-          "Name": "Waypoint 6",
-          "Position": "-64,-256,0",
-          "Enabled": true
-        },
-        {
-          "__guid": "4c0d1034-c852-430f-bd4a-081d01cf368c",
-          "Flags": 0,
-          "Name": "Waypoint 7",
-          "Position": "-192,-192,0",
+          "Name": "Waypoint 3",
+          "Position": "64,-560,0",
           "Enabled": true
         },
         {
           "__guid": "ac295aaf-34e7-4660-aea0-63668038c2aa",
           "Flags": 0,
-          "Name": "Waypoint 8",
-          "Position": "-256,0,0",
+          "Name": "Waypoint 4",
+          "Position": "-256,-448,0",
           "Enabled": true
         },
         {
-          "__guid": "fc72c6c8-6b04-4bd8-9324-1043299d39d4",
+          "__guid": "246aa354-833a-48b8-a1c1-0391b56de858",
           "Flags": 0,
-          "Name": "Waypoint 9",
-          "Position": "-192,192,0",
+          "Name": "Waypoint 5",
+          "Position": "-447.9998,112,0",
           "Enabled": true
         }
       ]
@@ -701,7 +673,7 @@
       "__guid": "ae5f25f4-9970-4ad8-888e-8404e7b6d37a",
       "Flags": 0,
       "Name": "Enemy",
-      "Position": "-79.9992,2736,0",
+      "Position": "-239.9996,3248.001,0",
       "Rotation": "0,0,0.7071068,-0.7071068",
       "Tags": "enemy",
       "Enabled": true,
@@ -825,6 +797,125 @@
           "Flags": 0,
           "Name": "fence_panel_large",
           "Position": "665.4481,229.2333,0",
+          "Tags": "barricade",
+          "Enabled": true,
+          "__Prefab": "prefabs/fence_panel_large.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "b21656da-9fd0-47b5-9d7a-0a7a1c5dec54",
+          "Flags": 0,
+          "Name": "fence_panel_large",
+          "Position": "668.5984,2.39241,0",
+          "Rotation": "0,0,-0.3586373,0.9334768",
+          "Tags": "barricade",
+          "Enabled": true,
+          "__Prefab": "prefabs/fence_panel_large.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "6f78f1d4-a5f6-4b95-87b2-4635a37bf04a",
+          "Flags": 0,
+          "Name": "fence_panel_large",
+          "Position": "933.6686,-196.1514,0",
+          "Rotation": "0,0,-0.2802527,0.959926",
+          "Tags": "barricade",
+          "Enabled": true,
+          "__Prefab": "prefabs/fence_panel_large.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "95bdc365-7fa6-4920-98e7-ff86505ca906",
+          "Flags": 0,
+          "Name": "fence_panel_large",
+          "Position": "935.563,-192.3586,0",
+          "Rotation": "0,0,0.5260375,0.8504611",
+          "Tags": "barricade",
+          "Enabled": true,
+          "__Prefab": "prefabs/fence_panel_large.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "b709491a-ff13-4461-a304-4f733583df8d",
+          "Flags": 0,
+          "Name": "fence_panel_large",
+          "Position": "985.5803,-92.14763,0",
+          "Rotation": "0,0,0.9252642,0.3793225",
+          "Tags": "barricade",
+          "Enabled": true,
+          "__Prefab": "prefabs/fence_panel_large.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "1f25588a-db96-4afa-a1fd-831d99a73826",
+          "Flags": 0,
+          "Name": "fence_panel_large",
+          "Position": "916.165,-189.9351,0",
+          "Rotation": "0,0,0.9543139,0.2988046",
+          "Tags": "barricade",
+          "Enabled": true,
+          "__Prefab": "prefabs/fence_panel_large.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "b3a65eb2-6b1f-4082-ae8c-ff5ea8b2a530",
+          "Flags": 0,
+          "Name": "fence_panel_large",
+          "Position": "796.7061,-113.3479,0",
+          "Rotation": "0,0,0.4275772,0.9039785",
+          "Tags": "barricade",
+          "Enabled": true,
+          "__Prefab": "prefabs/fence_panel_large.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "13dfc1d6-da4c-4d69-a5d1-674bea46962a",
+          "Flags": 0,
+          "Name": "fence_panel_large",
+          "Position": "1297.994,-324.0806,0",
+          "Rotation": "0,0,-0.03325947,0.9994465",
+          "Tags": "barricade",
+          "Enabled": true,
+          "__Prefab": "prefabs/fence_panel_large.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "2d517862-2e2f-4a4c-a9cd-c4fdf39af571",
+          "Flags": 0,
+          "Name": "fence_panel_large",
+          "Position": "994.6669,-303.8701,0",
+          "Rotation": "0,0,-0.03325947,0.9994465",
+          "Tags": "barricade",
+          "Enabled": true,
+          "__Prefab": "prefabs/fence_panel_large.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "635bbcf5-9606-4abd-9098-5c8788cc26d8",
+          "Flags": 0,
+          "Name": "fence_panel_large",
+          "Position": "1138.348,-313.4435,0",
+          "Rotation": "0,0,-0.03325947,0.9994464",
+          "Tags": "barricade",
+          "Enabled": true,
+          "__Prefab": "prefabs/fence_panel_large.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "187d1579-4cd0-44b1-87fe-537180b52f0e",
+          "Flags": 0,
+          "Name": "fence_panel_large",
+          "Position": "485.8352,5.233553,0",
+          "Tags": "barricade",
+          "Enabled": true,
+          "__Prefab": "prefabs/fence_panel_large.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "96ca3ca8-3e97-4999-adc0-8d37b812d4b5",
+          "Flags": 0,
+          "Name": "fence_panel_large",
+          "Position": "297.4481,5.233867,0",
           "Tags": "barricade",
           "Enabled": true,
           "__Prefab": "prefabs/fence_panel_large.prefab",
