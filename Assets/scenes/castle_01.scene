@@ -26,8 +26,8 @@
       "__guid": "a927c728-e0c6-4706-a1d2-ec67ec81dfe2",
       "Flags": 0,
       "Name": "Player",
-      "Position": "-272,1632,0",
-      "Rotation": "0,0,0.7071068,0.7071069",
+      "Position": "-560,1856,0",
+      "Rotation": "0,0,0.5,0.8660254",
       "Tags": "player",
       "Enabled": true,
       "Components": [
@@ -146,7 +146,7 @@
           ],
           "Children": [
             {
-              "__guid": "60d0aaf8-98aa-42d2-8c70-4088dbbb6f69",
+              "__guid": "4149e46f-37f0-41b6-b642-30b29d7761b9",
               "Flags": 0,
               "Name": "Clothing - army_boots",
               "Tags": "clothing",
@@ -154,7 +154,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "d88e9d85-9ed7-40d6-9ef7-b3611411f1ea",
+                  "__guid": "a63ef641-5a01-452f-989d-23cb63f5ff3f",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -185,7 +185,7 @@
               ]
             },
             {
-              "__guid": "aff018e5-c03b-4170-b09c-29617299302e",
+              "__guid": "b4acb975-220c-473f-86ee-8b45333f24b6",
               "Flags": 0,
               "Name": "Clothing - hoodie_black",
               "Tags": "clothing",
@@ -193,7 +193,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "afb26963-1693-4143-96d8-68819497eccb",
+                  "__guid": "d3ff115f-eb44-486a-aa43-7a1ab5a7b6fe",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -224,7 +224,7 @@
               ]
             },
             {
-              "__guid": "dfd0855d-0acd-4d6b-b091-98c799d7233a",
+              "__guid": "165e4a41-3524-400d-adfe-abcdccb9a495",
               "Flags": 0,
               "Name": "Clothing - brown_cargo_pants",
               "Tags": "clothing",
@@ -232,7 +232,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "55c344d4-1f13-4054-a059-537810a2d875",
+                  "__guid": "c82d9175-a4a4-44da-95b3-9fcf64d0cc7a",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -263,7 +263,7 @@
               ]
             },
             {
-              "__guid": "2629e03c-4d9a-48cb-a343-1763a131c4fe",
+              "__guid": "d5da055a-3071-4969-a8bf-fa6bb1dfc051",
               "Flags": 0,
               "Name": "Clothing - nerdy_glasses",
               "Tags": "clothing",
@@ -271,7 +271,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "ae62d656-eb8d-457a-9614-728b279bc326",
+                  "__guid": "c3b1970a-d1c2-4c0d-85a6-127fc014a913",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",
@@ -302,7 +302,7 @@
               ]
             },
             {
-              "__guid": "ad0f9537-77c7-4358-bf6c-258c400a094e",
+              "__guid": "1d0bdbe6-5575-4e90-aa32-7d0e5d9d3e48",
               "Flags": 0,
               "Name": "Clothing - hair.loose.grey",
               "Tags": "clothing",
@@ -310,7 +310,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "fa6ed77a-ee5c-4d0e-9daa-62d51269efdb",
+                  "__guid": "fd148708-7247-4fb6-b988-4e7aec8758bc",
                   "BodyGroups": 18446744073709551615,
                   "BoneMergeTarget": {
                     "_type": "component",

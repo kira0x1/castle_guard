@@ -1,8 +1,9 @@
 namespace Kira;
 
+using System;
 using Sandbox.Citizen;
 
-public sealed class EnemyController : Component
+public partial class EnemyController : Component
 {
     [Property, Range(0, 10)] private float WaitTime { get; set; } = 0f;
     [Property, Range(10, 200)] private float minDistance { get; set; } = 50f;
@@ -26,10 +27,6 @@ public sealed class EnemyController : Component
 
     private bool hasTarget;
     private Obstacle obstacleTarget;
-
-    private TimeSince timeSinceStop;
-    private bool isWaiting;
-
     private Vector3 NextPathPointPos { get; set; }
 
     protected override void OnStart()
@@ -48,64 +45,24 @@ public sealed class EnemyController : Component
         Log.Info(CurState);
         UpdateAnimator();
 
+        switch (CurState)
+        {
+            case EnemyStates.MOVING:
+                HandleMovingState();
+                break;
+            case EnemyStates.FIGHTING:
+                HandleFightingState();
+                break;
+            case EnemyStates.DEAD:
+                HandleDeadState();
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+
         if (CurState == EnemyStates.MOVING)
         {
-            if (isWaiting)
-            {
-                Log.Info("is waiting");
-                if (timeSinceStop > WaitTime)
-                {
-                    UpdateNextDestination();
-                }
-                else
-                {
-                    return;
-                }
-            }
-
-            var tpos = agent.GetLookAhead(100f);
-            var path = Scene.NavMesh.GetSimplePath(agent.AgentPosition, curWp.pos);
-
-            foreach (Vector3 p in path)
-            {
-                Gizmo.Draw.Color = Color.Blue;
-                Gizmo.Draw.LineSphere(p, 15f);
-            }
-
-            if (path.Count > 0)
-            {
-                var endPoint = path[^1];
-                float reachDist = Vector3.DistanceBetween(endPoint, curWp.pos);
-                canReachPos = reachDist < 5f;
-
-                if (!canReachPos && !hasTarget)
-                {
-                    // find closest barricade
-                    var obstacles = Scene.GetAllComponents<Obstacle>().ToList();
-                    Obstacle closestObs = obstacles[0];
-                    float closestDist = 9000f;
-
-                    foreach (Obstacle obs in obstacles)
-                    {
-                        float dist = Vector3.DistanceBetween(obs.WorldPosition, endPoint);
-                        if (dist < closestDist)
-                        {
-                            closestDist = dist;
-                            closestObs = obs;
-                        }
-                    }
-
-                    obstacleTarget = closestObs;
-                    hasTarget = true;
-                    CurState = EnemyStates.FIGHTING;
-                }
-            }
-
-            Gizmo.Draw.Color = Color.Blue;
-            Gizmo.Draw.LineSphere(tpos, 10f);
-
-
-            HandleWaypoints();
+            HandleMovingState();
         }
         else if (CurState == EnemyStates.FIGHTING)
         {
@@ -116,7 +73,7 @@ public sealed class EnemyController : Component
             }
 
             Gizmo.Draw.Color = Color.Yellow;
-            Gizmo.Draw.LineCircle(obstacleTarget.WorldPosition, 10f);
+            Gizmo.Draw.LineSphere(obstacleTarget.WorldPosition, 10f);
 
             agent.MoveTo(obstacleTarget.WorldPosition);
             float dist = Vector3.DistanceBetween(agent.WorldPosition, obstacleTarget.WorldPosition);
@@ -133,26 +90,21 @@ public sealed class EnemyController : Component
         }
     }
 
+    private void HandleDeadState()
+    {
+    }
+
+    private void HandleFightingState()
+    {
+    }
+
     private void HandleWaypoints()
     {
         float dist = Vector3.DistanceBetween(agent.AgentPosition, curWp.pos);
 
         if (dist < minDistance)
         {
-            timeSinceStop = 0;
-            if (WaitTime > 0)
-            {
-                agent.Stop();
-                agent.MoveTo(agent.AgentPosition);
-
-                agent.Velocity = Vector3.Zero;
-                agent.UpdateRotation = false;
-                isWaiting = true;
-            }
-            else
-            {
-                UpdateNextDestination();
-            }
+            UpdateNextDestination();
         }
 
         agent.MoveTo(curWp.pos);
@@ -163,7 +115,6 @@ public sealed class EnemyController : Component
         curWp = curWp.NextWaypoint;
         agent.UpdateRotation = true;
         agent.UpdatePosition = true;
-        isWaiting = false;
     }
 
     private void UpdateAnimator()
