@@ -1,5 +1,7 @@
 ﻿namespace Kira;
 
+using Sandbox.Citizen;
+
 public partial class EnemyController
 {
     private void HandleMovingState()
@@ -21,6 +23,7 @@ public partial class EnemyController
             Gizmo.Draw.LineSphere(p, 15f);
         }
 
+        anim.HoldType = CitizenAnimationHelper.HoldTypes.None;
         canReachPos = CanReachPath(path);
 
         if (!canReachPos && !hasTarget && path.Count > 0)

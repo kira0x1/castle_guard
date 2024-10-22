@@ -5,7 +5,9 @@ using Sandbox.Citizen;
 
 public partial class EnemyController : Component
 {
+    [Property] private bool StandStill { get; set; }
     [Property, Range(0, 10)] private float WaitTime { get; set; } = 0f;
+    [Property, Range(0, 2f)] private float PunchCooldown { get; set; } = 0.8f;
     [Property, Range(10, 200)] private float minDistance { get; set; } = 50f;
 
     private NavMeshAgent agent;
@@ -42,8 +44,10 @@ public partial class EnemyController : Component
 
     protected override void OnUpdate()
     {
-        Log.Info(CurState);
         UpdateAnimator();
+        if (StandStill) return;
+
+        // Log.Info(CurState);
 
         switch (CurState)
         {
@@ -66,28 +70,7 @@ public partial class EnemyController : Component
         }
         else if (CurState == EnemyStates.FIGHTING)
         {
-            if (!hasTarget || !obstacleTarget.IsValid())
-            {
-                hasTarget = false;
-                CurState = EnemyStates.MOVING;
-                return;
-            }
-
-            Gizmo.Draw.Color = Color.Yellow;
-            Gizmo.Draw.LineSphere(obstacleTarget.WorldPosition, 10f);
-
-            agent.MoveTo(obstacleTarget.WorldPosition);
-            float dist = Vector3.DistanceBetween(agent.WorldPosition, obstacleTarget.WorldPosition);
-
-            if (dist < 50)
-            {
-                if (timeSinceLastAttack > 0.3f)
-                {
-                    anim.TriggerJump();
-                    obstacleTarget.prop.OnDamage(new DamageInfo(20f, GameObject, GameObject));
-                    timeSinceLastAttack = 0f;
-                }
-            }
+            HandleFightingState();
         }
     }
 
@@ -97,6 +80,35 @@ public partial class EnemyController : Component
 
     private void HandleFightingState()
     {
+        if (!hasTarget || !obstacleTarget.IsValid())
+        {
+            hasTarget = false;
+            CurState = EnemyStates.MOVING;
+            return;
+        }
+
+        Gizmo.Draw.Color = Color.Yellow;
+        Gizmo.Draw.LineSphere(obstacleTarget.WorldPosition, 10f);
+
+        agent.MoveTo(obstacleTarget.WorldPosition);
+        float dist = Vector3.DistanceBetween(agent.WorldPosition, obstacleTarget.WorldPosition);
+
+        if (dist < 150)
+        {
+            anim.HoldType = CitizenAnimationHelper.HoldTypes.Punch;
+        }
+
+        if (dist < 50)
+        {
+            if (timeSinceLastAttack > PunchCooldown)
+            {
+                anim.Target.Set("holdtype_attack", Random.Shared.Float(0, 2f));
+                anim.Target.Set("b_attack", true);
+
+                obstacleTarget.prop.OnDamage(new DamageInfo(20f, GameObject, GameObject));
+                timeSinceLastAttack = 0f;
+            }
+        }
     }
 
     private void HandleWaypoints()
