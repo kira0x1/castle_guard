@@ -1,0 +1,31 @@
+@using System
+@using Kira
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+    @if (!player.HasObstacle) return;
+
+    <div class="container">
+        <div class="title">
+            @($"{player.ObstacleTarget.Health} / {player.ObstacleTarget.MaxHealth}")
+        </div>
+    </div>
+</root>
+
+@code
+{
+
+    private PlayerInteractor player;
+
+    protected override void OnAwake()
+    {
+        base.OnAwake();
+        player = Scene.GetAllComponents<PlayerInteractor>().FirstOrDefault();
+    }
+
+    /// <summary>
+    /// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+    /// </summary>
+    protected override int BuildHash() => HashCode.Combine(player.HasObstacle, player.HasObstacle ? player.ObstacleTarget.Health : 0);
+}
