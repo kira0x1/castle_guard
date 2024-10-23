@@ -1,12 +1,17 @@
 ﻿namespace Kira;
 
 [Category("_Kira")]
-public class EnemyManager : Component
+public class EnemyStageSystem : GameObjectSystem
 {
     private StageManager stageManager;
     private List<EnemyController> enemies = new List<EnemyController>();
 
-    protected override void OnAwake()
+    public EnemyStageSystem(Scene scene) : base(scene)
+    {
+        Listen(Stage.SceneLoaded, 10, OnSceneLoaded, "SceneLoaded");
+    }
+
+    private void OnSceneLoaded()
     {
         stageManager = Scene.GetAllComponents<StageManager>().FirstOrDefault();
         enemies = Scene.GetAllComponents<EnemyController>().ToList();
@@ -20,6 +25,7 @@ public class EnemyManager : Component
         foreach (EnemyController enemyController in enemies)
         {
             // Remove listener on enemy death?
+            stageManager.OnNavGenerationBegin += enemyController.OnNavGenerationBegin;
             stageManager.OnNavGenerated += enemyController.OnNavGenerated;
         }
     }

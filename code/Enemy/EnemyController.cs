@@ -18,6 +18,9 @@ public partial class EnemyController : Component
 
     private TimeSince timeSinceLastAttack;
 
+    // The velocity before the navmesh was updated
+    private Vector3 prevVelocity;
+
     private enum EnemyStates
     {
         MOVING,
@@ -144,8 +147,16 @@ public partial class EnemyController : Component
         anim.ProceduralHitReaction(damageInfo, 10f, force);
     }
 
+    // Cache velocity and keep that velocity so that we dont have hiccups with the animation
+    public void OnNavGenerationBegin()
+    {
+        prevVelocity = agent.Velocity;
+    }
+
     public void OnNavGenerated()
     {
+        agent.Velocity = prevVelocity;
+
         // If were not fighting a player or key structure, and just trying to get to break an obstacle then stop fighting and go to move state
         if (CurState == EnemyStates.FIGHTING)
         {

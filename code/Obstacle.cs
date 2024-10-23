@@ -38,7 +38,6 @@ public sealed class Obstacle : Component, IBreakable
         IsBroken = true;
         prop.IsStatic = false;
         prop.Enabled = false;
-
         StageManager.Instance.GenerateNav();
     }
 }

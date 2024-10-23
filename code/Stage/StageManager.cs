@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 public class StageManager : Component
 {
     public Action OnNavGenerated;
+    public Action OnNavGenerationBegin;
+
     public static StageManager Instance { get; set; }
 
     protected override void OnAwake()
@@ -16,13 +18,12 @@ public class StageManager : Component
 
     public void GenerateNav()
     {
+        OnNavGenerationBegin?.Invoke();
         Scene.NavMesh.Generate(Scene.PhysicsWorld).ContinueWith(OnNavDone);
     }
 
     private void OnNavDone(Task<bool> res)
     {
-        Log.Info("nav done");
-        Log.Info(res.Status);
         OnNavGenerated?.Invoke();
     }
 }
