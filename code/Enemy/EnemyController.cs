@@ -26,10 +26,8 @@ public partial class EnemyController : Component
     }
 
     private EnemyStates CurState;
-
     private bool hasTarget;
     private Obstacle obstacleTarget;
-    private Vector3 NextPathPointPos { get; set; }
 
     protected override void OnStart()
     {
@@ -78,12 +76,17 @@ public partial class EnemyController : Component
     {
     }
 
+    private void LeaveFightingState()
+    {
+        hasTarget = false;
+        CurState = EnemyStates.MOVING;
+    }
+
     private void HandleFightingState()
     {
         if (!hasTarget || !obstacleTarget.IsValid())
         {
-            hasTarget = false;
-            CurState = EnemyStates.MOVING;
+            LeaveFightingState();
             return;
         }
 
@@ -139,5 +142,14 @@ public partial class EnemyController : Component
     public void OnHit(DamageInfo damageInfo, Vector3 force = default)
     {
         anim.ProceduralHitReaction(damageInfo, 10f, force);
+    }
+
+    public void OnNavGenerated()
+    {
+        // If were not fighting a player or key structure, and just trying to get to break an obstacle then stop fighting and go to move state
+        if (CurState == EnemyStates.FIGHTING)
+        {
+            LeaveFightingState();
+        }
     }
 }

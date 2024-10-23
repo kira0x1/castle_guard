@@ -14,7 +14,7 @@ public class PlayerInteractor : Component
 
         if (!HasObstacle) return;
 
-        if (Input.Pressed("Slot1"))
+        if (Input.Pressed("attack1"))
         {
             ObstacleTarget.TakeDamage(new DamageInfo(25f, GameObject, GameObject));
         }
@@ -35,7 +35,6 @@ public class PlayerInteractor : Component
 
             if (trace.GameObject.Components.TryGet(out Obstacle obs))
             {
-                Log.Info(obs.Health);
                 ObstacleTarget = obs;
                 HasObstacle = true;
             }

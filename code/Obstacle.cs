@@ -1,5 +1,7 @@
 namespace Kira;
 
+using System;
+
 public sealed class Obstacle : Component, IBreakable
 {
     public GameObject GameObj { get; set; }
@@ -15,6 +17,7 @@ public sealed class Obstacle : Component, IBreakable
 
         MaxHealth = prop.Health;
         Health = prop.Health;
+
         prop.OnPropTakeDamage += OnPropTakeDamage;
         prop.OnPropBreak += OnPropBreak;
     }
@@ -35,6 +38,7 @@ public sealed class Obstacle : Component, IBreakable
         IsBroken = true;
         prop.IsStatic = false;
         prop.Enabled = false;
-        Scene.NavMesh.Generate(Scene.PhysicsWorld);
+
+        StageManager.Instance.GenerateNav();
     }
 }
