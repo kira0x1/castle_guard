@@ -9,6 +9,10 @@ public partial class EnemyController : Component
     [Property, Range(0, 10)] private float WaitTime { get; set; } = 0f;
     [Property, Range(0, 2f)] private float PunchCooldown { get; set; } = 0.8f;
     [Property, Range(10, 200)] private float minDistance { get; set; } = 50f;
+    [Property] private GameObject DetectTransform { get; set; }
+
+    [Property, Range(0f, 400f)] private float DetectionDistance { get; set; } = 100f;
+    [Property, Range(0f, 80f)] private float DetectionRadius { get; set; } = 22f;
 
     private NavMeshAgent agent;
     private bool canReachPos;
@@ -46,9 +50,12 @@ public partial class EnemyController : Component
     protected override void OnUpdate()
     {
         UpdateAnimator();
+        DetectPlayer();
+
         if (StandStill) return;
 
         // Log.Info(CurState);
+
 
         switch (CurState)
         {
@@ -93,8 +100,11 @@ public partial class EnemyController : Component
             return;
         }
 
-        Gizmo.Draw.Color = Color.Yellow;
-        Gizmo.Draw.LineSphere(obstacleTarget.WorldPosition, 10f);
+        using (Gizmo.Scope("ObstacleGizmo"))
+        {
+            Gizmo.Draw.Color = Color.Yellow;
+            Gizmo.Draw.LineSphere(obstacleTarget.WorldPosition, 10f);
+        }
 
         agent.MoveTo(obstacleTarget.WorldPosition);
         float dist = Vector3.DistanceBetween(agent.WorldPosition, obstacleTarget.WorldPosition);

@@ -41,6 +41,35 @@ public partial class EnemyController
         HandleWaypoints();
     }
 
+    private void DetectPlayer()
+    {
+        var startPos = DetectTransform.WorldPosition;
+        var straightEnd = startPos + WorldTransform.Forward * DetectionDistance;
+        var leftEnd = startPos + (WorldTransform.Left + WorldTransform.Forward).Normal * DetectionDistance;
+        var rightEnd = startPos + (WorldTransform.Right + WorldTransform.Forward).Normal * DetectionDistance;
+
+        SceneTraceResult leftTrace = Scene.Trace.Ray(startPos, leftEnd).IgnoreGameObjectHierarchy(GameObject).HitTriggers().Radius(DetectionRadius).Run();
+        SceneTraceResult rightTrace = Scene.Trace.Ray(startPos, rightEnd).IgnoreGameObjectHierarchy(GameObject).HitTriggers().Radius(DetectionRadius).Run();
+        SceneTraceResult straightTrace = Scene.Trace.Ray(startPos, straightEnd).IgnoreGameObjectHierarchy(GameObject).HitTriggers().Radius(DetectionRadius).Run();
+
+
+        SceneTraceResult[] traces = { straightTrace, leftTrace, rightTrace };
+
+        using (Gizmo.Scope("Detection"))
+        {
+            foreach (var t in traces)
+            {
+                Gizmo.Draw.Color = new Color(26, 160, 110);
+                Gizmo.Draw.Arrow(t.StartPosition, t.EndPosition, 9f, 3);
+
+                if (t.Hit)
+                {
+                    Gizmo.Draw.LineSphere(t.HitPosition, 8f);
+                }
+            }
+        }
+    }
+
     private bool CanReachPath(List<Vector3> path)
     {
         if (path.Count == 0) return false;
