@@ -24,7 +24,7 @@ public class PlayerInteractor : Component
     {
         var rayStart = RayObj.WorldPosition;
         var rayEnd = rayStart + RayObj.WorldTransform.Forward * InteractionDistance;
-        var trace = Scene.Trace.Ray(rayStart, rayEnd).HitTriggers().Radius(30).Run();
+        var trace = Scene.Trace.Ray(rayStart, rayEnd).IgnoreGameObjectHierarchy(GameObject).HitTriggers().Radius(30).Run();
 
         Gizmo.Draw.Color = Color.Magenta;
         Gizmo.Draw.Line(trace.StartPosition, trace.EndPosition);

@@ -50,7 +50,6 @@ public partial class EnemyController : Component
     protected override void OnUpdate()
     {
         UpdateAnimator();
-        DetectPlayer();
 
         if (StandStill) return;
 
@@ -90,6 +89,13 @@ public partial class EnemyController : Component
     {
         hasTarget = false;
         CurState = EnemyStates.MOVING;
+    }
+
+    // Switch to something more generic rather then obstacle and player
+    // Enter fighting state and aggro towards priority target
+    private void EnterFightingState(PlayerController target)
+    {
+        // hasTarget = true;
     }
 
     private void HandleFightingState()

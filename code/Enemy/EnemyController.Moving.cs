@@ -6,6 +6,8 @@ public partial class EnemyController
 {
     private void HandleMovingState()
     {
+        DetectPlayer();
+
         // Can we get to our goal?
         // yes -> move to goal
         // no -> find closest obstacle, and destroy
@@ -52,12 +54,19 @@ public partial class EnemyController
         SceneTraceResult rightTrace = Scene.Trace.Ray(startPos, rightEnd).IgnoreGameObjectHierarchy(GameObject).HitTriggers().Radius(DetectionRadius).Run();
         SceneTraceResult straightTrace = Scene.Trace.Ray(startPos, straightEnd).IgnoreGameObjectHierarchy(GameObject).HitTriggers().Radius(DetectionRadius).Run();
 
-
         SceneTraceResult[] traces = { straightTrace, leftTrace, rightTrace };
 
-        using (Gizmo.Scope("Detection"))
+        foreach (var t in traces)
         {
-            foreach (var t in traces)
+            if (t.Hit)
+            {
+                if (t.GameObject.Components.TryGet(out PlayerController player))
+                {
+                    
+                }
+            }
+
+            using (Gizmo.Scope("Detection"))
             {
                 Gizmo.Draw.Color = new Color(26, 160, 110);
                 Gizmo.Draw.Arrow(t.StartPosition, t.EndPosition, 9f, 3);
